@@ -15,17 +15,11 @@ body{
 }
 
 .timeline {
-    /*max-width: 1000px;*/
-    flex: 0 0 1000px;
-
+    flex: 0 0 800px;
     font-family: 'Inter', sans-serif;
-
-
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
 }
-
-
 
 .header {
     padding: 1.5rem 1rem;
@@ -36,12 +30,12 @@ body{
 }
 
 .top-tweets {
-    width: 2rem;
+    width: 1.5rem;
     height: auto;
 }
 
 .page-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -50,13 +44,11 @@ body{
     align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
-    padding:  1rem 1rem;
+    padding:  .3rem 1rem;
     border-bottom: 1px solid #2F3336;
 }
 
 .avatar {
-    /*height: 70px;*/
-    /*width: 70px;*/
     flex: 0 0 70px;
     /*padding: 0 rem;*/
 }
@@ -76,11 +68,12 @@ body{
     width: 100%;
     border: none;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: black;
     color: white;
     resize: none;
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
+    margin: 13px 0;
 }
 
 .tweet-editor-buttons {
@@ -93,13 +86,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0.8rem 0;
+    /*padding: 0.8rem 0;*/
     gap: 1rem;
 }
-
+.tweet-editor-actions button {
+    background-color: transparent;
+    border: none;
+}
 .button {
     text-transform: capitalize;
-    padding: 1rem 2rem;
+    padding: .7rem 1.5rem;
     border: none;
     border-radius: 50px;
     background-color: #1D9BF0;
@@ -137,33 +133,34 @@ body{
 .tweet-body{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
 }
 .tweet-title{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .tweet-title svg{
-    width: 1.5rem;
+    width: 1.2rem;
     height: auto;
 }
 .tweet-title-author{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .tweet-title-details{
     color: #6E767D;
 }
 .tweet-text{
     color: #D9D9D9;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .tweet-image{
     width: 100%;
+    padding:  .3rem 0 0 0;
 }
 
 .tweet-image img{
@@ -185,7 +182,7 @@ body{
 }
 
 .tweet-actions svg {
-    width: 1.5rem;
+    width: 1rem;
     height: auto;
     color: #2F3336;
 }
