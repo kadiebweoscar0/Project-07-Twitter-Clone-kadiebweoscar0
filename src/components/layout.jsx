@@ -5,7 +5,6 @@ function Layout({children}) {
         <>
             <div className="left-sidebar"/>
             {children}
-          /* first commit */
             <div className="right-sidebar" />
         </>
     );
