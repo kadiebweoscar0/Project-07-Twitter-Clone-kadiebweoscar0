@@ -1,7 +1,7 @@
 
 function TweetTitleAuthor(props) {
     return(
-        <h3>{props.titleAuthor}</h3>
+        <h3 className={props.myStyleTitleAuthor}>{props.titleAuthor}</h3>
     )
 }
 export default TweetTitleAuthor

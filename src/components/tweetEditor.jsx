@@ -5,7 +5,7 @@ import imageProfil from "../images/profile-photo.png";
 function TweetEditor() {
     return(
         <div className="tweet-editor">
-            <Avatar avatar="imageProfil" myClassName="avatar"/>
+            <Avatar avatar={imageProfil} myClassName="avatar"/>
             <TweetEditorForm />
         </div>
     )
