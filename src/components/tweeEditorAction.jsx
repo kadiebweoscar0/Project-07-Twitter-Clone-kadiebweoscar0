@@ -1,9 +1,9 @@
 
 function TweeEditorAction(props) {
     return(
-        <button className="button">
-            <img src={props.imageAction} alt="image-action" />
-        </button>
+        <div>
+            <img src={props.imageAction} alt="image-action"/>
+        </div>
     )
 }
 export default TweeEditorAction

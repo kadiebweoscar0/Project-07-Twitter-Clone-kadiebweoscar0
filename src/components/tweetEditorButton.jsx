@@ -8,11 +8,13 @@ import Button from "./button";
 
 function TweetEditorButton() {
     return(
-        <div className="tweet-editor-actions">
-            <TweeEditorAction imageAction={iconMedia} />
-            <TweeEditorAction imageAction={iconGif} />
-            <TweeEditorAction imageAction={iconPoll} />
-            <TweeEditorAction imageAction={iconSchedoule} />
+        <div className="tweet-editor-buttons">
+            <div className="tweet-editor-actions">
+                <TweeEditorAction imageAction={iconMedia} />
+                <TweeEditorAction imageAction={iconGif} />
+                <TweeEditorAction imageAction={iconPoll} />
+                <TweeEditorAction imageAction={iconSchedoule} />
+            </div>
             <Button textButton="Tweet" />
         </div>
     )

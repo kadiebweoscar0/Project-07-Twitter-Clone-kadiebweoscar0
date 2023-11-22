@@ -7,11 +7,11 @@ import TweeEditorAction from "./tweeEditorAction";
 
 function TweetAction() {
     return(
-        <div className="tweet-editor-actions">
-            <TweeEditorAction imageAction={iconReply} />
-            <TweeEditorAction imageAction={iconRetweet} />
-            <TweeEditorAction imageAction={iconReact} />
-            <TweeEditorAction imageAction={iconShare} />
+        <div className="tweet-actions">
+            <TweeEditorAction imageAction={iconReply} myStyleButton="tweet-action" />
+            <TweeEditorAction imageAction={iconRetweet} myStyleButton="tweet-action" />
+            <TweeEditorAction imageAction={iconReact} myStyleButton="tweet-action" />
+            <TweeEditorAction imageAction={iconShare} myStyleButton="tweet-action" />
         </div>
     )
 }
