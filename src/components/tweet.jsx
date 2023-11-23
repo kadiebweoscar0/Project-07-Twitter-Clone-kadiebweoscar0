@@ -64,7 +64,6 @@ function Tweet() {
                 </div>
             </div>
 
-
             <div className="tweet">
                 <Avatar avatar={iconTweeter} myClassName="tweet-avatar"/>
                 <div className="tweet-body">
