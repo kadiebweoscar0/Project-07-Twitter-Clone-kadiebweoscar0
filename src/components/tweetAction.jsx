@@ -3,15 +3,31 @@ import iconRetweet from "../images/iconRetweet.svg";
 import iconReact from "../images/iconReact.svg";
 import iconShare from "../images/iconShare.svg";
 import TweeEditorAction from "./tweeEditorAction";
+import ValueAction from "./valueAction";
 
 
 function TweetAction(props) {
     return(
         <div className="tweet-actions">
-            <TweeEditorAction valueAction={props.value1} imageAction={iconReply} myStyleButton="tweet-action" />
-            <TweeEditorAction valueAction={props.value2} imageAction={iconRetweet} myStyleButton="tweet-action" />
-            <TweeEditorAction valueAction={props.value3} imageAction={iconReact} myStyleButton="tweet-action" />
-            <TweeEditorAction valueAction={props.value4} imageAction={iconShare} myStyleButton="tweet-action" />
+            <span className="tweet-editor-actions">
+                <TweeEditorAction  imageAction={iconReply} myStyleButton="tweet-action" />
+                <ValueAction value={props.value1} />
+            </span>
+
+            <span className="tweet-editor-actions">
+                <TweeEditorAction  imageAction={iconRetweet} myStyleButton="tweet-action" />
+                <ValueAction value={props.value2} />
+            </span>
+
+            <span className="tweet-editor-actions">
+                <TweeEditorAction  imageAction={iconReact} myStyleButton="tweet-action" />
+                <ValueAction value={props.value3} />
+            </span>
+
+            <span className="tweet-editor-actions">
+                <TweeEditorAction  imageAction={iconShare} myStyleButton="tweet-action" />
+                <ValueAction value={props.value4} />
+            </span>
         </div>
     )
 }

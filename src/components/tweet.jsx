@@ -24,7 +24,7 @@ function Tweet() {
                     <div className="tweet-title">
                         <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="THE NEW YORK TIME" />
                         <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@nytimes" />
-                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=".2h" />
+                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=". 2h" />
                     </div>
                     <TweetText tweetTextValue="Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land" />
                     <TweetImage urlImage={tweetimage} />
@@ -40,7 +40,7 @@ function Tweet() {
                     <div className="tweet-title">
                         <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="Tweeter" />
                         <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@Tweeter" />
-                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=".OCT 29" />
+                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=". OCT 29" />
                     </div>
                     <TweetText tweetTextValue="BIG NEWS lol jk still tweeter" />
                     <div className="tweet-content">
@@ -55,7 +55,7 @@ function Tweet() {
                     <div className="tweet-title">
                         <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="Tweeter" />
                         <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@Tweeter" />
-                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=".OCT 4" />
+                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=". OCT 4" />
                     </div>
                     <TweetText tweetTextValue="Hello literaly everyone" />
                     <div className="tweet-content">
@@ -64,15 +64,20 @@ function Tweet() {
                 </div>
             </div>
 
+
             <div className="tweet">
                 <Avatar avatar={iconTweeter} myClassName="tweet-avatar"/>
                 <div className="tweet-body">
                     <div className="tweet-title">
-                        <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="Tweeter" />
-                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@Tweeter" />
-                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=".OCT 4" />
+                        <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="THE NEW YORK TIME" />
+                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@nytimes" />
+                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=". 2h" />
                     </div>
                     <TweetText tweetTextValue="Hello literaly everyone" />
+                    <TweetImage urlImage={tweetimage} />
+                    <div className="tweet-content">
+                        <TweetAction value1="118,7K" value2="785,4k" value3="3,3M" value4="" />
+                    </div>
                 </div>
             </div>
         </>

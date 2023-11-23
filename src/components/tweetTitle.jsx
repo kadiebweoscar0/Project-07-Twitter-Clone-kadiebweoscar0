@@ -7,7 +7,7 @@ function TweetTitle() {
         <div className="tweet-title">
             <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="CNN" />
             <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@CNN" />
-            <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=".7min" />
+            <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=". 7min" />
         </div>
     )
 }

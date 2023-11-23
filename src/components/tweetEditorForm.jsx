@@ -4,10 +4,10 @@ import TweetEditorInput from "./tweetEditorInput";
 
 function TweetEditorForm() {
     return(
-        <form tweet-editor-actions>
+        <div className="tweet-editor-form">
             <TweetEditorInput valueText="what's happening?"/>
             <TweetEditorButton />
-        </form>
+        </div>
     )
 }
 export default TweetEditorForm
