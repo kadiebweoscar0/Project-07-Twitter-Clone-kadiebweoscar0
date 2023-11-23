@@ -6,11 +6,11 @@ import TweetEditor from "./tweetEditor"
 
 function Timeline() {
     return(
-        <>
+        <div className="timeline">
          <Header />
          <TweetEditor />
          <Tweet /> 
-        </>
+        </div>
     )
 }
 
