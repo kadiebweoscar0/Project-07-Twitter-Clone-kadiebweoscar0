@@ -14,24 +14,23 @@ function Tweet(props) {
         <>
         <div className="tweet">
             <Avatar avatar={tweetProfile} myClassName="tweet-avatar"/>
-            <TweetContent />
+            <TweetContent tweetActionValue1="57" tweetActionValue2="144" tweetActionValue3="184" tweetActionValue4="" />
         </div>
 
         <div className="tweet">
-        <Avatar avatar={tweetProfil2} myClassName="tweet-avatar"/>
-        <div className="tweet-body">
-            <div className="tweet-title">
-                <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="THE NEW BOY TIME" />
-                <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@nytimes" />
-                <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=".2h" />
+            <Avatar avatar={tweetProfil2} myClassName="tweet-avatar"/>
+            <div className="tweet-body">
+                <div className="tweet-title">
+                    <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor="THE NEW YORK TIME" />
+                    <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail="@nytimes" />
+                    <TweetTitleDetail styleTitleDetail="tweet-title-details" titleDetail=".2h" />
+                </div>
+                <TweetText tweetTextValue="Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land" />
+                <TweetImage ulrImage={tweetImage} />
+                <div className="tweet-content">
+                    <TweetAction value1="19" value2="48" value3="482" value4="19" />
+                </div>
             </div>
-            <TweetText tweetTextValue="Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land" />
-            <TweetImage ulrImage= {tweetImage} />
-            <div className="tweet-content">
-            <TweetAction />
-        </div>
-        </div>
-        
         </div>
         </>
     )

@@ -1,11 +1,11 @@
 import TweetAction from "./tweetAction";
 import TweetBody from "./tweetBody";
 
-function TweetContent() {
+function TweetContent(props) {
     return(
         <div className="tweet-content">
             <TweetBody />
-            <TweetAction />
+            <TweetAction value1={props.tweetActionValue1} value2={props.tweetActionValue2} value3={props.tweetActionValue3} value4={props.tweetActionValue4} />
         </div>
     )
 }

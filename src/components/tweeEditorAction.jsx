@@ -2,7 +2,7 @@
 function TweeEditorAction(props) {
     return(
         <div>
-            <img src={props.imageAction} alt="image-action"/>
+            <img src={props.imageAction} alt="image-action"/>{"  "}{props.valueAction}
         </div>
     )
 }
