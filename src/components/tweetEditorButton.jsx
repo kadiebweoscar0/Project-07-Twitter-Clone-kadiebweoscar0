@@ -4,6 +4,7 @@ import iconGif from "../images/iconGif.svg";
 import iconPoll from "../images/iconPoll.svg";
 import iconSchedoule from "../images/iconSchedoule.svg";
 import TweeEditorAction from "./tweeEditorAction";
+import iconEmoji from "../images/iconEmoji.svg"
 import Button from "./button";
 
 function TweetEditorButton() {
@@ -13,7 +14,9 @@ function TweetEditorButton() {
                 <TweeEditorAction imageAction={iconMedia} />
                 <TweeEditorAction imageAction={iconGif} />
                 <TweeEditorAction imageAction={iconPoll} />
+                <TweeEditorAction imageAction={iconEmoji} />
                 <TweeEditorAction imageAction={iconSchedoule} />
+
             </div>
             <Button textButton="Tweet" />
         </div>
