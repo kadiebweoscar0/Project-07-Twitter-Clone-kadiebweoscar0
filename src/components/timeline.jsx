@@ -1,5 +1,5 @@
 import Header from "./header"
-import Tweet from "./tweet"
+import Tweets from "./tweets"
 import TweetEditor from "./tweetEditor"
 
 
@@ -7,9 +7,9 @@ import TweetEditor from "./tweetEditor"
 function Timeline() {
     return(
         <div className="timeline">
-         <Header />
-         <TweetEditor />
-         <Tweet /> 
+            <Header />
+            <TweetEditor />
+            <Tweets /> 
         </div>
     )
 }
