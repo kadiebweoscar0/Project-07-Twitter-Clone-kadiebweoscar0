@@ -4,7 +4,7 @@ import WhoToFollow from "./whoToFollow"
 
 function Trends() {
     return(
-        <div>
+        <div className="trends">
             <Search />
             <TrendsForYou />
             <WhoToFollow />

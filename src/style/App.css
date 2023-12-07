@@ -197,7 +197,7 @@ body{
 .sidebar{
     padding: 1.5rem 0;
     font-family: 'Inter', sans-serif;
-    margin-right: 200px;
+    margin-right: 220px;
 }
 
 .iconeTweeterSideBar{
@@ -207,7 +207,6 @@ body{
 .navBar{
     padding: 0 1rem;
     position: fixed;
-    height: 100%;
 }
 
 .button-navBar{
@@ -239,7 +238,7 @@ body{
     align-items: center;
     padding: 0 1rem;
     gap: 1rem;
-    margin: 80% 90px 0px 0px;
+    margin: 30% 90px 0px 0px;
 }
 
 .profilePhoto-setting{
@@ -253,12 +252,16 @@ body{
     flex-direction: column;
 }
 
+.trends{
+    margin: 0px 15px;
+}
+
 .search {
     position: relative;
     top: 10px;
     background: #16181C;
     border-radius: 42px;
-    padding: 0 5rem;
+    padding: 0 4.9rem;
     
 }
 .trends-search-img {

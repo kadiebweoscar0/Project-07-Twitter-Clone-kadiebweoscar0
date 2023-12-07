@@ -1,11 +1,17 @@
 import React from 'react';
 import Timeline from '../components/timeline';
+import SideBar from '../components/sidebar';
+import Trends from '../components/trends';
 
 function Home() {
   return (
-    <main className="timeline">
-      <Timeline />
-    </main>
+    <>
+      <SideBar />
+      <main>
+        <Timeline />
+      </main>
+      <Trends />
+    </>
   );
 }
 
