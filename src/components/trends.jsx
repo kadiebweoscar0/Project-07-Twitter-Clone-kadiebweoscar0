@@ -1,10 +1,13 @@
 import Search from "./search"
+import TrendsForYou from "./trendsForYou"
+import WhoToFollow from "./whoToFollow"
 
 function Trends() {
     return(
         <div>
-            <h1>Trends</h1>
             <Search />
+            <TrendsForYou />
+            <WhoToFollow />
         </div>
 
     )

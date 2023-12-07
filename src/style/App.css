@@ -200,6 +200,10 @@ body{
     margin-right: 200px;
 }
 
+.iconeTweeterSideBar{
+    margin-bottom: 30px;
+}
+
 .navBar{
     padding: 0 1rem;
     position: fixed;
@@ -235,7 +239,7 @@ body{
     align-items: center;
     padding: 0 1rem;
     gap: 1rem;
-    margin: 50% 90px 0px 0px;
+    margin: 100% 90px 0px 0px;
 }
 
 .profilePhoto-setting{
@@ -246,13 +250,16 @@ body{
 
 .title-profileSetting{
     display: flex;
+    flex-direction: column;
 }
 
 .search {
     position: relative;
+    top: 10px;
     background: #16181C;
     border-radius: 42px;
     padding: 0 5rem;
+    
 }
 .trends-search-img {
     position: absolute;
@@ -266,5 +273,48 @@ body{
     color: gray;
     padding: .7rem;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
+}
+
+.trendsForYou, .whoToFollow{
+    margin-top: 30px;
+    background-color: #16181C;
+    padding: 1rem;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.trendsForYou span{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trendsText{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trendsText div{
+    padding: 5px 0;
+}
+
+.trendsText div h3{
+    padding: 3px 0;
+}
+
+p{
+    color: #d9d9d9a1;
+}
+
+a{
+    text-decoration: none;
+    color: #1D9BF0;
+}
+
+.accountFollow{
+    display: flex;
+}
+
+.accountFollow span{
+    flex-direction: column;
 }
