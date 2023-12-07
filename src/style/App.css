@@ -239,7 +239,7 @@ body{
     align-items: center;
     padding: 0 1rem;
     gap: 1rem;
-    margin: 100% 90px 0px 0px;
+    margin: 80% 90px 0px 0px;
 }
 
 .profilePhoto-setting{
@@ -275,6 +275,7 @@ body{
     font-size: 1rem;
     text-align: left;
 }
+
 
 .trendsForYou, .whoToFollow{
     margin-top: 30px;
@@ -313,8 +314,27 @@ a{
 
 .accountFollow{
     display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
 }
 
-.accountFollow span{
+ .avatar-and-text{
+    display: flex;
+}
+
+.avatar-and-text span{
+    display: flex;
     flex-direction: column;
+}
+
+
+.span-button{
+    text-transform: capitalize;
+    padding: .7rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    margin-left:20px;
 }
