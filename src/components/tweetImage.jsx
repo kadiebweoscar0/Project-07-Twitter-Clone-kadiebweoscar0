@@ -1,11 +1,12 @@
+import ImageDefault from "./imageDefault"
 
 function TweetImage(props) {
 
     if (props.urlImage) {
         return(
             <div className="tweet-image">
-        <img src={props.urlImage} alt="image-tweet" />
-    </div>
+                <ImageDefault urlImage={props.urlImage} alt="image-tweet" />
+            </div>
         )
     }
 }
