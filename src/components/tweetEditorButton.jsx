@@ -18,7 +18,7 @@ function TweetEditorButton() {
                 <TweeEditorAction imageAction={iconSchedoule} />
 
             </div>
-            <Button textButton="Tweet" />
+            <Button textButton="Tweet" className="button" />
         </div>
     )
 }

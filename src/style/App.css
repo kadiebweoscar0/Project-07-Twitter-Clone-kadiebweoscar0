@@ -193,3 +193,54 @@ body{
     justify-content: center;
     gap: 20px;
 }
+
+.sidebar{
+    padding: 1.5rem 0;
+    font-family: 'Inter', sans-serif;
+    margin-right: 10rem;
+}
+.navBar{
+    padding: 0 1rem;
+    position: fixed;
+}
+.button-navBar{
+    padding: .9rem 5rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #1D9BF0;
+    color: white;
+    font-size: 1rem;
+}
+
+.ul-navBar{
+    list-style: none;
+}
+
+.ul-navBar li{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #D9D9D9;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.profileSetting{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 1rem;
+    margin-top: 7rem;
+}
+
+.profilePhoto-setting{
+    height: 50px;
+    width: 50px;
+    flex: 0 0 50px;
+}
+
+.title-profileSetting{
+    display: flex;
+}
