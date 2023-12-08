@@ -6,31 +6,45 @@ import TweeEditorAction from "./tweeEditorAction";
 import ValueAction from "./valueAction";
 import { useState } from "react";
 
-
-
 function TweetAction(props) {
-    return(
-        <div className="tweet-actions">
-            <span className="tweet-editor-actions">
-                <TweeEditorAction  imageAction={iconReply} myStyleButton="tweet-action" />
-                <ValueAction value={props.value1} />
-            </span>
+  const [likeCount, setLikeCount] = useState(props.value3);
+  const  [isLike, setIsLike]= useState(false)
 
-            <span className="tweet-editor-actions">
-                <TweeEditorAction  imageAction={iconRetweet} myStyleButton="tweet-action" />
-                <ValueAction value={props.value2} />
-            </span>
+  const handleLikeClick = () => {
+    if (isLike === false) {
+        setLikeCount(likeCount + 1);
+    }
+    else{
+        setLikeCount(likeCount - 1);
+    }
+    setIsLike(!isLike)
 
-            <span className="tweet-editor-actions">
-                <TweeEditorAction  imageAction={iconReact} myStyleButton="tweet-action" />
-                <ValueAction value={props.value3} />
-            </span>
+   
+  };
 
-            <span className="tweet-editor-actions">
-                <TweeEditorAction  imageAction={iconShare} myStyleButton="tweet-action" />
-                <ValueAction value={props.value4} />
-            </span>
-        </div>
-    )
+  return (
+    <div className="tweet-actions">
+      <span className="tweet-editor-actions">
+        <TweeEditorAction imageAction={iconReply} myStyleButton="tweet-action" />
+        <ValueAction value={props.value1} />
+      </span>
+
+      <span className="tweet-editor-actions">
+        <TweeEditorAction imageAction={iconRetweet} myStyleButton="tweet-action" />
+        <ValueAction value={props.value2} />
+      </span>
+
+      <span className="tweet-editor-actions" onClick={handleLikeClick}>
+        <TweeEditorAction imageAction={iconReact} myStyleButton="tweet-action" />
+        <ValueAction value={likeCount} />
+      </span>
+
+      <span className="tweet-editor-actions">
+        <TweeEditorAction imageAction={iconShare} myStyleButton="tweet-action" />
+        <ValueAction value={props.value4} />
+      </span>
+    </div>
+  );
 }
-export default TweetAction
+
+export default TweetAction;

@@ -341,3 +341,7 @@ a{
     font-size: 1rem;
     margin-left:20px;
 }
+
+.hover-like:hover{
+    color: red;
+}
