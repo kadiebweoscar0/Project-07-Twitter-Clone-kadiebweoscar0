@@ -2,6 +2,7 @@ import iconReply from "../images/iconReply.svg";
 import iconRetweet from "../images/iconRetweet.svg";
 import iconReact from "../images/iconReact.svg";
 import iconShare from "../images/iconShare.svg";
+import liked from "../images/Liked.svg"
 import TweeEditorAction from "./tweeEditorAction";
 import ValueAction from "./valueAction";
 import { useState } from "react";
@@ -29,14 +30,19 @@ function TweetAction(props) {
         <ValueAction value={props.value1} />
       </span>
 
-      <span className="tweet-editor-actions">
-        <TweeEditorAction imageAction={iconRetweet} myStyleButton="tweet-action" />
+      <span className="tweet-editor-actions ">
+        <span>
+            <TweeEditorAction imageAction={iconRetweet} myStyleButton="tweet-action" />
+        </span>
         <ValueAction value={props.value2} />
       </span>
 
-      <span className="tweet-editor-actions" onClick={handleLikeClick}>
-        <TweeEditorAction imageAction={iconReact} myStyleButton="tweet-action" />
-        <ValueAction value={likeCount} />
+      <span className="tweet-editor-actions hover-of-action" onClick={handleLikeClick}>
+        <span>
+            <TweeEditorAction imageAction={isLike ? liked : iconReact} myStyleButton="tweet-action" />
+        </span>
+        
+        <ValueAction valueColor="valueColor" value={likeCount} />
       </span>
 
       <span className="tweet-editor-actions">
