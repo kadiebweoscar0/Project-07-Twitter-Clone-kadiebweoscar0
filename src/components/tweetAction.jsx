@@ -26,19 +26,21 @@ function TweetAction(props) {
   return (
     <div className="tweet-actions">
       <span className="tweet-editor-actions">
-        <TweeEditorAction imageAction={iconReply} myStyleButton="tweet-action" />
+        <span className="hover-cecle">
+          <TweeEditorAction imageAction={iconReply} myStyleButton="tweet-action" />
+        </span>
         <ValueAction value={props.value1} />
       </span>
 
       <span className="tweet-editor-actions ">
-        <span>
+        <span className="hover-cecle">
             <TweeEditorAction imageAction={iconRetweet} myStyleButton="tweet-action" />
         </span>
         <ValueAction value={props.value2} />
       </span>
 
       <span className="tweet-editor-actions hover-of-action" onClick={handleLikeClick}>
-        <span>
+        <span className="hover-cecle">
             <TweeEditorAction imageAction={isLike ? liked : iconReact} myStyleButton="tweet-action" />
         </span>
         
@@ -46,7 +48,10 @@ function TweetAction(props) {
       </span>
 
       <span className="tweet-editor-actions">
-        <TweeEditorAction imageAction={iconShare} myStyleButton="tweet-action" />
+        <span className="hover-cecle">
+          <TweeEditorAction imageAction={iconShare} myStyleButton="tweet-action" />
+        </span>
+        
         <ValueAction value={props.value4} />
       </span>
     </div>
