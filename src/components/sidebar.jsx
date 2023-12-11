@@ -9,9 +9,11 @@ function SideBar() {
     return(
         <div className="sidebar">
             <div className="navBar">
+                <div>
                 <Avatar myClassName="iconeTweeterSideBar" avatar={iconeTweeterSideBar} />
                 <NavBar />
                 <Button className="button-navBar" textButton="Tweet" />
+                </div> 
                 <div className="profileSetting"> 
                     <Avatar myClassName="profilePhoto-setting" avatar={imageProfil} />
                     <div className="title-profileSetting">

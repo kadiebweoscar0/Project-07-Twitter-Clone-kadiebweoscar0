@@ -344,18 +344,6 @@ a{
     margin-left:20px;
 }
 
-.hover-of-action, .valueColor:hover{
-    /* background-color: #c1035b; */
+.valueColor:hover{
     color: #c1035b;
-}
-
-.hover-of-actionS{
-    width: 100%;
-    height: 100%;
-}
-
-.hover-of-action-cercle:hover{
-    border-radius: 100%;
-    background-color: #c2c2c286;
-    width: 100%;
 }
