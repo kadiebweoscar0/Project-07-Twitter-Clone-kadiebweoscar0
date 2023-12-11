@@ -6,7 +6,6 @@ function PageProfile() {
     return(
         <>
             <SideBar/>
-            <h1>Profile</h1>
             <Profile />
             <Trends />
         </>

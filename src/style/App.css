@@ -361,3 +361,12 @@ a{
     background-color: #b6b9be36;
     padding: .7em .5em .2em .5em;
 }
+
+
+/* profile */
+
+.entete{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
