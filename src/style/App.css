@@ -9,7 +9,7 @@ body{
 }
 
 #root{
-    width: 100%;
+    width: 100%;    
     display: flex;
     justify-content: space-between;
 }
@@ -357,16 +357,73 @@ a{
 }
 
 .hover-cecle:hover{
-    border-radius: 50%;
     background-color: #b6b9be36;
-    padding: .7em .5em .2em .5em;
 }
 
-
 /* profile */
+
+.profile{
+    font-family: 'Inter', sans-serif;
+    border-left: 1px solid #2F3336;
+    border-right: 1px solid #2F3336;
+    overflow: hidden;
+    width: 100%;
+
+}
 
 .entete{
     display: flex;
     gap: 2rem;
     padding: 1rem 2rem;
+}
+
+.icon-back, .hover-cecle{
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.icon-back:hover{
+    background-color: #6e767d46;
+}
+
+.image-cover img{
+    width: 100%;
+    height: 300px;
+}
+
+.profil-author{
+    position: relative;
+    bottom: 80px;
+    left: 25px;
+}
+
+.profil-author img{
+    width: 20%;
+}
+
+.detail-author{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.user-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    height: 7%;
+    border-bottom: 1px solid #2F3336;
+}
+
+.user-info li{
+    height: 100%;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.user-info li:hover{
+    background-color: #6e767d46;
 }
