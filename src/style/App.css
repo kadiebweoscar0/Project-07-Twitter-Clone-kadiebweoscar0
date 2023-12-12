@@ -392,6 +392,8 @@ a{
 }
 
 .profil-author{
+    display: flex;
+    justify-content: space-between;
     position: relative;
     bottom: 80px;
     left: 25px;
@@ -399,6 +401,12 @@ a{
 
 .profil-author img{
     width: 20%;
+}
+
+.profil-author-and-button-editor button{
+    position: relative;
+    left: 82%;
+    bottom: 135px;
 }
 
 .detail-author{

@@ -2,6 +2,7 @@ import imageProfil from "../images/profile-photo.png";
 import ImageDefault from "./imageDefault";
 import iconBacak from "../images/iconBack.svg"
 import imageCover from "../images/tweet-image.png"
+import Button from "./button";
 
 
 export function UserName(props) {
@@ -27,9 +28,14 @@ export default function Profile() {
             <span className="image-cover">
                 <ImageDefault urlImage={imageCover} />
             </span>
-            <span className="profil-author">
-                <ImageDefault urlImage={imageProfil} />
+            <span className="profil-author-and-button-editor">
+                <span className="profil-author">
+                    <ImageDefault urlImage={imageProfil} />
+                    
+                </span>
+                <Button className="button" textButton='edit profil' />
             </span>
+           
             <div className="detail-author">
                 <UserName username='Oscar kadiebwe' numberPost="@kadiebweOscar" />
                 <p>joined December 2023</p>
