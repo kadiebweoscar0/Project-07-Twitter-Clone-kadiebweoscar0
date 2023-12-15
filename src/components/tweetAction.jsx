@@ -22,13 +22,21 @@ function TweetAction(props) {
     like: props.value3,
     update: props.value4
   });
-  const  [isAction, setIsAction]= useState(true)
+  const  [isAction, setIsAction]= useState(false)
 
   const handleLikeClick = (e) => {
     
     const actionName = e
     
-    if (isAction) {
+    if (isAction === false) {
+      if (["comment", "retweet", "like", "update"].includes(actionName)) {
+        setActionCount({
+          ...actionCount,
+          [e]: actionCount[e] - 1
+        })
+      }
+    }
+    else{
       if (["comment", "retweet", "like", "update"].includes(actionName)) {
         setActionCount({
           ...actionCount,
@@ -36,6 +44,8 @@ function TweetAction(props) {
         })
       }
     }
+
+   const islike = handleLikeClick()
     setIsAction(!isAction)
       
     // if (isLike === false) {
@@ -70,11 +80,9 @@ function TweetAction(props) {
       <span className="tweet-editor-actions hover-of-action"  onClick={()=>handleLikeClick("like")}>
         <figure className="bg-color-like">
         <span className="hover-cecle">
-          {
-            // isAction ? 
-            likeIcon 
-            // : liked2
-          }
+          {/* {
+          isAction ? liked2 : likeIcon
+          } */}
         </span>
         
         <ValueAction valueColor="valueColor" value={actionCount.like} />
