@@ -16,6 +16,7 @@ const liked2 = <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns
 </svg>
 
 function TweetAction(props) {
+  const [isLike, setIsLike] = useState(false)
   const [actionCount, setActionCount] = useState({
     comment: props.value1,
     retweet: props.value2,
@@ -44,20 +45,16 @@ function TweetAction(props) {
         })
       }
     }
-
-   const islike = handleLikeClick()
-    setIsAction(!isAction)
-      
-    // if (isLike === false) {
-    //     setLikeCount(likeCount + 1);
-    // }
-    // else{
-    //     setLikeCount(likeCount - 1);
-    // }
-    // setIsLike(!isLike)
-
-   
+    setIsAction(!isAction)   
   };
+
+  const verificationLike = () =>{
+    if (isLike === false) {
+      setIsLike(!isLike)
+    }
+    setIsLike(!isLike)
+  }
+
 
   return (
     <div className="tweet-actions">
@@ -77,12 +74,10 @@ function TweetAction(props) {
         <ValueAction value={actionCount.retweet} />
       </span>
 
-      <span className="tweet-editor-actions hover-of-action"  onClick={()=>handleLikeClick("like")}>
+      <span className="tweet-editor-actions hover-of-action"  onClick={()=>handleLikeClick("like")} onMouseUp={verificationLike}>
         <figure className="bg-color-like">
         <span className="hover-cecle">
-          {/* {
-          isAction ? liked2 : likeIcon
-          } */}
+          {isLike? liked2 : likeIcon}
         </span>
         
         <ValueAction valueColor="valueColor" value={actionCount.like} />
