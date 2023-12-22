@@ -380,6 +380,7 @@ a{
 .icon-back, .hover-cecle{
     padding: .6rem;
     border-radius: 50%;
+    align-items: center;
 }
 
 .icon-back:hover{
@@ -442,6 +443,6 @@ a{
     justify-content: center;
 }
 
-.bg-color-like:hover{
+/* .bg-color-like:hover{
     background-color: #c1035c28;
-}
+} */
