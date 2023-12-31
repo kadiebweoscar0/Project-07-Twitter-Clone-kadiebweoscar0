@@ -1,13 +1,18 @@
 import Avatar from "./avatar";
 import TweetContent from "./tweetContent";
 import { datas } from "../datas";
+import { NavLink } from "react-router-dom";
 
 function Tweet() {
     return(
         <>
             {datas.map((data) => (
+
+            
                 <div className="tweet" key={data.id}>
+                <NavLink to="/pageProfile" >
                     <Avatar avatar={data.tweetProfile} myClassName="tweet-avatar" />
+                </NavLink>
                     <TweetContent
                         tweetTextValue={data.tweetTextValue}
                         tweetActionValue1={data.tweetActionValue1}
