@@ -3,6 +3,7 @@ import ImageDefault from "./imageDefault";
 import iconBacak from "../images/iconBack.svg"
 import imageCover from "../images/tweet-image.png"
 import Button from "./button";
+import { NavLink } from "react-router-dom";
 
 
 export function UserName(props) {
@@ -20,9 +21,12 @@ export default function Profile() {
     return (
         <div className="profile">
             <div className="entete">
-                <span className="icon-back" title="back">
-                    <ImageDefault urlImage={iconBacak}  />
-                </span>
+                <NavLink to="/">
+                    <span className="icon-back" title="back">
+                        <ImageDefault urlImage={iconBacak}  />
+                    </span>
+                </NavLink>
+               
                 <UserName username='Oscar kadiebwe' numberPost="27" />
             </div>
             <span className="image-cover">
