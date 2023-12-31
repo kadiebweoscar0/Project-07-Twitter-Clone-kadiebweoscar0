@@ -9,7 +9,7 @@ export function UserName(props) {
     return(
         <div className="title-author">
             <h2>{props.username}</h2>
-            <p>{props.numberPost}props</p>
+            <p>{props.numberPost}</p>
         </div>
         
     )
