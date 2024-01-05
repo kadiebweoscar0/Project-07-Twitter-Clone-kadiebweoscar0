@@ -1,6 +1,7 @@
 import ImageDefault from "./imageDefault"
 import iconeTreeDot from "../images/iconeTreeDot.svg"
 import iconeSeting from "../images/iconeSeting.svg"
+import { NavLink } from "react-router-dom"
 
 
 export function TrendsText(props) {
@@ -30,7 +31,7 @@ function TrendsForYou() {
             <TrendsText p1="trending in Turkey" squid="#SQUID" valueSquid="2,066 Tweets" />
             <TrendsText p1="trending in Turkey" squid="#SQUID" valueSquid="2,066 Tweets" />
             <TrendsText p1="trending in Turkey" squid="#SQUID" valueSquid="2,066 Tweets" />
-            <a href="#">Show more</a>
+            <NavLink to="#">Show more</NavLink>
         </div>
     )
 }

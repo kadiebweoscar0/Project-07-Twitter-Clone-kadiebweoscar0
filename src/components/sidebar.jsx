@@ -4,6 +4,7 @@ import NavBar from "./navbar";
 import imageProfil from "../images/profile-photo.png";
 import iconePrivate from "../images/iconePrivate.svg"
 import iconeTweeterSideBar from "../images/iconeTweeterSideBar.svg"
+import { NavLink } from "react-router-dom";
 
 function SideBar() {
     return(
@@ -17,7 +18,7 @@ function SideBar() {
                 <div className="profileSetting"> 
                     <Avatar myClassName="profilePhoto-setting" avatar={imageProfil} />
                     <div className="title-profileSetting">
-                        <h3>Bradley Ortiz <img src={iconePrivate} alt="icone" /> </h3>
+                        <h3><NavLink to="/pageProfile"> Bradley Ortiz </NavLink> <img src={iconePrivate} alt="icone" /> </h3>
                         <p>@bradley...</p>
                     </div>
 
