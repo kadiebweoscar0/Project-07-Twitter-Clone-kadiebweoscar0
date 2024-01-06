@@ -5,7 +5,7 @@ import Trends from "../components/trends";
 function PageProfile() {
     return(
         <>
-            <SideBar/>
+            <SideBar />
             <Profile />
             <Trends />
         </>

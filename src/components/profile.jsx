@@ -3,7 +3,7 @@ import ImageDefault from "./imageDefault";
 import iconBacak from "../images/iconBack.svg"
 import imageCover from "../images/tweet-image.png"
 import Button from "./button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 
 export function UserName(props) {
@@ -18,6 +18,7 @@ export function UserName(props) {
 
 
 export default function Profile() {
+
     return (
         <div className="profile">
             <div className="entete">
@@ -44,6 +45,7 @@ export default function Profile() {
                 <UserName username='Oscar kadiebwe' numberPost="@kadiebweOscar" />
                 <p>joined December 2023</p>
                 <p>6 following  0 followers</p>
+
             </div>
             <ul className="user-info">
                 <li>Post</li>

@@ -19,6 +19,7 @@ function Tweet() {
                         tweetActionValue2={data.tweetActionValue2}
                         tweetActionValue3={data.tweetActionValue3}
                         tweetActionValue4={data.tweetActionValue4}
+                        id={data.id}
                         titleAuthor={data.titleAuthor}
                         titleAddress={data.titleAddress}
                         dateHoursPublication={data.dateHoursPublication}

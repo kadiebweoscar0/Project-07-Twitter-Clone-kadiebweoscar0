@@ -2,6 +2,7 @@ import Home from "./pages/home.jsx";
 import Layout from "./components/layout.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pageprofile from "./pages/pageProfile.jsx";
+import { datas } from "./datas.js";
 
 
 import('./style/reset.css');
@@ -13,7 +14,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path=":id" element={<Pageprofile />} />
+          <Route path="/:id" element={<Pageprofile />} />
         </Routes>
       </BrowserRouter>
     </Layout>
