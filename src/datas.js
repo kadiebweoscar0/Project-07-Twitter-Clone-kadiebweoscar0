@@ -64,8 +64,8 @@ export const datas = [
         titleAddress:"@Twitter",
         dateHoursPublication:". OCT 4",
         tweetTextValue:"Hello literaly everyone",
-        tweetActionValue1:"118,7K",
-        tweetActionValue2:"785,4k",
+        tweetActionValue1:118.7,
+        tweetActionValue2:785.4,
         tweetActionValue3:3.3,
         tweetActionValue4:"",
         imageTweet:"src/images/tweet-image.png"

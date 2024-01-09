@@ -88,29 +88,20 @@ function TweetAction(props) {
       onClick={()=>handleLikeClick("retweet")} 
       nameIcone={retweetIcon}/>
 
-      
+      <Like 
+      value={actionCount.like} 
+      onMousseEnter={handleIconHover(2)} 
+      onMouseLeave={handleIconHover(2)} 
+      onClick={()=>handleLikeClick("like")} 
+      nameIcone={isLike? liked2 : likeIcon} />
+     
+     <Update 
+      value={actionCount.update} 
+      onMousseEnter={handleIconHover(3)} 
+      onMouseLeave={handleIconHover(3)} 
+      onClick={()=>handleLikeClick("update")} 
+      nameIcone={updateIcon} />
 
-      <span className="tweet-editor-actions hover-of-action"  onClick={()=>handleLikeClick("like")} onMouseUp={handleMouseUp} onMouseEnter={handleIconHover(2)} onMouseLeave={handleIconHover(2)}>
-        <figure className="bg-color-like">
-        <span className="hover-cecle">
-          {isLike? liked2 : likeIcon}
-        </span>
-        
-        <ValueAction valueColor="valueColor" value={actionCount.like} />
-        </figure>
-        
-      </span>
-
-      <span className="tweet-editor-actions hover-of-action" onClick={()=>handleLikeClick("update")} onMouseEnter={handleIconHover(3)} onMouseLeave={handleIconHover(3)}>
-        <span className="hover-cecle">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.53 7.47L12.53 2.47C12.237 2.177 11.762 2.177 11.47 2.47L6.47001 7.47C6.17601 7.763 6.17601 8.238 6.47001 8.53C6.76401 8.822 7.23701 8.824 7.53001 8.53L11.25 4.81V15C11.25 15.414 11.586 15.75 12 15.75C12.414 15.75 12.75 15.414 12.75 15V4.81L16.47 8.53C16.616 8.677 16.808 8.75 17 8.75C17.192 8.75 17.384 8.678 17.53 8.53C17.823 8.237 17.823 7.763 17.53 7.47Z" fill="#D9D9D9"/>
-<path d="M19.708 21.944H4.292C3.028 21.944 2 20.916 2 19.652V14C2 13.586 2.336 13.25 2.75 13.25C3.164 13.25 3.5 13.586 3.5 14V19.652C3.5 20.089 3.855 20.444 4.292 20.444H19.708C20.145 20.444 20.5 20.089 20.5 19.652V14C20.5 13.586 20.836 13.25 21.25 13.25C21.664 13.25 22 13.586 22 14V19.652C22 20.916 20.972 21.944 19.708 21.944Z" fill="#D9D9D9"/>
-</svg>
-</span>
-        
-        <ValueAction value={actionCount.update} />
-      </span>
     </div>
   );
 }
@@ -170,4 +161,54 @@ export  function Retweet({value, onMousseEnter, onMouseLeave, onClick, nameIcone
 
 const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M23.77 15.67C23.478 15.377 23.003 15.377 22.71 15.67L20.49 17.89V7.65C20.49 5.582 18.807 3.9 16.74 3.9H10.89C10.476 3.9 10.14 4.236 10.14 4.65C10.14 5.064 10.476 5.4 10.89 5.4H16.74C17.98 5.4 18.99 6.41 18.99 7.65V17.89L16.77 15.67C16.477 15.377 16.002 15.377 15.71 15.67C15.418 15.963 15.416 16.438 15.71 16.73L19.21 20.23C19.355 20.377 19.547 20.45 19.74 20.45C19.933 20.45 20.123 20.378 20.27 20.23L23.77 16.73C24.064 16.438 24.064 15.963 23.77 15.67ZM13.11 18.95H7.25997C6.01997 18.95 5.00997 17.94 5.00997 16.7V6.46L7.22997 8.68C7.37797 8.827 7.56997 8.9 7.76197 8.9C7.95397 8.9 8.14597 8.827 8.29197 8.68C8.58497 8.387 8.58497 7.912 8.29197 7.62L4.79197 4.12C4.49897 3.826 4.02397 3.826 3.73197 4.12L0.231975 7.62C-0.0620254 7.912 -0.0620254 8.387 0.231975 8.68C0.525975 8.973 0.998975 8.973 1.29197 8.68L3.51197 6.46V16.7C3.51197 18.768 5.19497 20.45 7.26197 20.45H13.112C13.526 20.45 13.862 20.114 13.862 19.7C13.862 19.286 13.525 18.95 13.112 18.95H13.11Z" fill="#D9D9D9"/>
+</svg>
+
+export  function Like({value, onMousseEnter, onMouseLeave, onClick, nameIcone}) {
+  return (
+    <>
+          <span className="tweet-editor-actions hover-of-action" 
+          onClick={onClick}
+          // {()=>handleLikeClick("like")} 
+          // onMouseEnter= {onMousseEnter}
+          // {handleIconHover(2)} 
+          // onMouseLeave= {onMouseLeave} 
+          // {handleIconHover()}
+          >
+        <span className="hover-cecle">
+        {nameIcone}
+        {console.log(nameIcone)}
+</span>
+
+        <ValueAction value={value} />
+        {/* {actionCount.like}  */}
+      </span>
+    </>
+  )
+}
+
+export  function Update({value, onMousseEnter, onMouseLeave, onClick, nameIcone}) {
+  return (
+    <>
+          <span className="tweet-editor-actions hover-of-action" 
+          onClick={onClick}
+          // {()=>handleLikeClick("update")} 
+          // onMouseEnter= {onMousseEnter}
+          // {handleIconHover(3)} 
+          // onMouseLeave= {onMouseLeave} 
+          // {handleIconHover(3)}
+          >
+        <span className="hover-cecle">
+        {nameIcone}
+</span>
+
+        <ValueAction value={value} />
+        {/* {actionCount.update}  */}
+      </span>
+    </>
+  )
+}
+
+const updateIcon =  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.53 7.47L12.53 2.47C12.237 2.177 11.762 2.177 11.47 2.47L6.47001 7.47C6.17601 7.763 6.17601 8.238 6.47001 8.53C6.76401 8.822 7.23701 8.824 7.53001 8.53L11.25 4.81V15C11.25 15.414 11.586 15.75 12 15.75C12.414 15.75 12.75 15.414 12.75 15V4.81L16.47 8.53C16.616 8.677 16.808 8.75 17 8.75C17.192 8.75 17.384 8.678 17.53 8.53C17.823 8.237 17.823 7.763 17.53 7.47Z" fill="#D9D9D9"/>
+<path d="M19.708 21.944H4.292C3.028 21.944 2 20.916 2 19.652V14C2 13.586 2.336 13.25 2.75 13.25C3.164 13.25 3.5 13.586 3.5 14V19.652C3.5 20.089 3.855 20.444 4.292 20.444H19.708C20.145 20.444 20.5 20.089 20.5 19.652V14C20.5 13.586 20.836 13.25 21.25 13.25C21.664 13.25 22 13.586 22 14V19.652C22 20.916 20.972 21.944 19.708 21.944Z" fill="#D9D9D9"/>
 </svg>
