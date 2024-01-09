@@ -7,8 +7,6 @@ function Tweet() {
     return(
         <>
             {datas.map((data) => (
-
-            
                 <div className="tweet" key={data.id}>
                 <NavLink to="/pageProfile" >
                     <Avatar avatar={data.tweetProfile} myClassName="tweet-avatar" />
