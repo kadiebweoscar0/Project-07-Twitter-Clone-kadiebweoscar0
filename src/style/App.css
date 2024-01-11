@@ -357,13 +357,13 @@ a{
     margin-left:20px;
 }
 
-.valueColor:hover{
+/* .valueColor:hover{
     color: #c1035b;
 }
 
 .hover-cecleLike:hover{
     background-color: #d61f3e48;
-}
+} */
 
 /* profile */
 
@@ -382,7 +382,7 @@ a{
     padding: 1rem 2rem;
 }
 
-.icon-back, .hover-cecleReply, .hover-cecleRetweet, .hover-cecleLike, .hover-cecleShare{
+.icon-back, .hover-cecle{
     padding: .6rem;
     border-radius: 50%;
     align-items: center;

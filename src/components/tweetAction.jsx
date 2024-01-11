@@ -70,14 +70,26 @@ export default TweetAction;
 
 export  function Comment({value, onClick}) {
   const [isHover, setIsHover] = useState("#D9D9D9")
+  const [v, setV] = useState(false)
+
+  const bgColorComment = {
+    backgroundColor: "#00bbf949"
+  }
+
+  const valueColor = {
+    color: "#00bbf9"
+  }
+
 
   const handleMouseHover = () =>{
         setIsHover("#00bbf9")
+        setV(true)
 
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
+    setV(false)
   }
 
 
@@ -92,11 +104,11 @@ export  function Comment({value, onClick}) {
         onMouseOut={handleMouseOut}
         title="Reply"
       >
-      <span className="hover-cecle" >
+      <span className="hover-cecle" style={v ? bgColorComment : {}} >
         {commentIcon}
       </span>
 
-      <ValueAction value={value} />
+      <ValueAction value={value} style={v ? valueColor : {}} />
         {/* {actionCount.comment}  */}
       </span>
     </>
@@ -145,21 +157,11 @@ export  function Like({value, onClick}) {
 
   let styleLike = {
     backgroundColor: "#d61f3e48",
-    // padding: ".6rem",
-    // borderRadius:"50%",
-    // alignItems: "center"
   }
 
   let valueStyle = {
     color: "#f21b3f"
   }
-
-  // let styleLik = {
-  //   // backgroundColor: "#d61f3e48",
-  //   padding: ".6rem",
-  //   borderRadius:"50%",
-  //   alignItems: "center"
-  // }
 
   const handleMouseUp = () =>{
     setIsLike(!isLike)
@@ -188,10 +190,10 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
         onMouseOut={handleMouseOut}
         title="Like"
       >
-      <span className="hover-cecleLike" style={v ? styleLike : {}} >
+      <span className="hover-cecle" style={v ? styleLike : {}} >
         {isLike? likeIconWithBg : likeIconEmptyBg}
       </span>
-        <ValueAction valueColor={v ? valueStyle : {}} value={value} />
+        <ValueAction style={v ? valueStyle : {}} value={value} />
         {/* {actionCount.like}  */}
       </span>
     </>
