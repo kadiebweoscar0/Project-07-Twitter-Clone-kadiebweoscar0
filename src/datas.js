@@ -12,7 +12,12 @@ export const datas = [
         tweetActionValue2: 144,
         tweetActionValue3: 184,
         tweetActionValue4:"",
-        imageTweet:""
+        imageTweet:"",
+        dateJoined : "joined December 2023",
+        following : 6,
+        followers: 0,
+        posts: 0
+
     },
 
     {
@@ -26,7 +31,11 @@ export const datas = [
         tweetActionValue2:48,
         tweetActionValue3:482,
         tweetActionValue4:19,
-        imageTweet:"src/images/tweet-image.png"
+        imageTweet:"src/images/tweet-image.png",
+        dateJoined : "joined December 2021",
+        following : 16,
+        followers: 10,
+        posts: 20
     },
 
     {
@@ -40,7 +49,11 @@ export const datas = [
         tweetActionValue2:36.6,
         tweetActionValue3:267.1,
         tweetActionValue4:"",
-        imageTweet:""
+        imageTweet:"",
+        dateJoined : "joined December 2018",
+        following : 61,
+        followers: 80,
+        posts: 23
     },
 
     {
@@ -54,7 +67,11 @@ export const datas = [
         tweetActionValue2:785.4,
         tweetActionValue3:3.3,
         tweetActionValue4:"",
-        imageTweet:""
+        imageTweet:"",
+        dateJoined : "joined December 2024",
+        following : 6,
+        followers: 5,
+        posts: 3
     },
 
     {
@@ -68,6 +85,10 @@ export const datas = [
         tweetActionValue2:785.4,
         tweetActionValue3:3.3,
         tweetActionValue4:"",
-        imageTweet:"src/images/tweet-image.png"
+        imageTweet:"src/images/tweet-image.png",
+        dateJoined : "joined December 2020",
+        following : 69,
+        followers: 70,
+        posts: 31
     }
 ]

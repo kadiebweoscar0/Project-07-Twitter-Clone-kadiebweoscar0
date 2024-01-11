@@ -4,13 +4,17 @@ import iconBacak from "../images/iconBack.svg"
 import imageCover from "../images/tweet-image.png"
 import Button from "./button";
 import { NavLink, useParams } from "react-router-dom";
+import { datas } from "../datas";
+
 
 
 export function UserName(props) {
+   
+
     return(
         <div className="title-author">
             <h2>{props.username}</h2>
-            <p>{props.numberPost}</p>
+            <p>Posts  {props.numberPost}</p>
         </div>
         
     )
@@ -18,6 +22,10 @@ export function UserName(props) {
 
 
 export default function Profile() {
+    const useParam = useParams()
+    const {id} = useParam
+
+    const data = datas.find((data) => data.id == id);
 
     return (
         <div className="profile">
@@ -28,23 +36,23 @@ export default function Profile() {
                     </span>
                 </NavLink>
                
-                <UserName username='Oscar kadiebwe' numberPost="27" />
+                <UserName username={data.titleAuthor} numberPost={data.posts} />
             </div>
             <span className="image-cover">
-                <ImageDefault urlImage={imageCover} />
+                <ImageDefault urlImage={data.tweetProfile} />
             </span>
             <span className="profil-author-and-button-editor">
                 <span className="profil-author">
-                    <ImageDefault urlImage={imageProfil} />
+                    <ImageDefault urlImage={data.tweetProfile} />
                     
                 </span>
                 <Button className="button" textButton='edit profil' />
             </span>
            
             <div className="detail-author">
-                <UserName username='Oscar kadiebwe' numberPost="@kadiebweOscar" />
-                <p>joined December 2023</p>
-                <p>6 following  0 followers</p>
+                <UserName username={data.titleAuthor} numberPost={data.titleAddress} />
+                <p>{data.dateJoined}</p>
+                <p>{data.following} following   {data.followers} followers</p>
 
             </div>
             <ul className="user-info">

@@ -14,7 +14,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:id" element={<Pageprofile />} />
+          <Route path="/pageProfile/:id" element={<Pageprofile />} />
         </Routes>
       </BrowserRouter>
     </Layout>
