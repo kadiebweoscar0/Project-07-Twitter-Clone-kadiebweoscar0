@@ -213,17 +213,26 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
 
 export  function Update({value, onClick}) {
   const [isHover, setIsHover] = useState("#D9D9D9")
+  const [v, setV] = useState(false)
 
-  let v = false
+  const bgColorUpdate = {
+    backgroundColor: "#00bbf949"
+  }
+
+  const valueColor = {
+    color: "#00bbf9"
+  }
+
 
   const handleMouseHover = () =>{
         setIsHover("#00bbf9")
-        v = true
+        setV(true)
+
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
-    v = false
+    setV(false)
   }
 
 
@@ -240,10 +249,10 @@ const updateIcon =  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         onMouseOut={handleMouseOut}
         title="Share"
       >
-      <span className="hover-cecle">
+      <span className="hover-cecle" style={v ? bgColorUpdate : {} }>
         {updateIcon}
       </span>
-        <ValueAction value={value} />
+        <ValueAction value={value} style={v ? valueColor : {} } />
         {/* {actionCount.update}  */}
       </span>
     </>
