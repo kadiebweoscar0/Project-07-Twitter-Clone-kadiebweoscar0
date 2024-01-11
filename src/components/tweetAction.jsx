@@ -117,13 +117,24 @@ export  function Comment({value, onClick}) {
 
 export  function Retweet({value, onClick}) {
  const [isHover, setIsHover] = useState("#D9D9D9")
+ const [v, setV] = useState(false)
+
+ const bgColorRetweet = {
+  backgroundColor: "#80ed9950"
+}
+
+const valueColor = {
+  color: "#80ed99"
+}
 
   const handleMouseHover = () =>{
         setIsHover("#80ed99")
+        setV(true)
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
+    setV(false)
   }
 
 const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,11 +149,11 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         title="Repost"
       >
         
-        <span className="hover-cecle">
+        <span className="hover-cecle" style={v ? bgColorRetweet : {} }>
           {retweetIcon}
         </span>
         <span>
-          <ValueAction value={value} />
+          <ValueAction value={value} style={v ? valueColor : {} } />
           {/* {actionCount.retweet}  */}
         </span>
       </span>
