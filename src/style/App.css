@@ -203,9 +203,12 @@ body{
 .sidebar{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 1.5rem 0;
     font-family: 'Inter', sans-serif;
     margin-right: 220px;
+    /* background-color: red; */
+    height: 100%;
 }
 
 .iconeTweeterSideBar{
@@ -215,6 +218,8 @@ body{
 .navBar{
     padding: 0 1rem;
     position: fixed;
+    /* height: 50%; */
+    /* background-color: #1D9BF0; */
 }
 
 .navBar a{
@@ -254,7 +259,8 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: .3rem;
-    margin-top: 60%;
+    margin-top: 25%;
+   
 }
 
 .profilePhoto-setting{
@@ -357,14 +363,6 @@ a{
     margin-left:20px;
 }
 
-/* .valueColor:hover{
-    color: #c1035b;
-}
-
-.hover-cecleLike:hover{
-    background-color: #d61f3e48;
-} */
-
 /* profile */
 
 .profile{
@@ -447,7 +445,3 @@ a{
     align-items: center;
     justify-content: center;
 }
-
-/* .bg-color-like:hover{
-    background-color: #c1035c28;
-} */

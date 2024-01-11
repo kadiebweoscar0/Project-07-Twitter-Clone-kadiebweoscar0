@@ -8,23 +8,23 @@ import { NavLink } from "react-router-dom";
 
 function SideBar() {
     return(
-        <div className="sidebar">
-            <div className="navBar">
-                <div>
+        <span className="sidebar">
+            <span className="navBar">
+                <span>
                 <Avatar myClassName="iconeTweeterSideBar" avatar={iconeTweeterSideBar} />
                 <NavBar />
                 <Button className="button-navBar" textButton="Tweet" />
-                </div> 
-                <div className="profileSetting"> 
+                </span> 
+                <span className="profileSetting"> 
                     <Avatar myClassName="profilePhoto-setting" avatar={imageProfil} />
-                    <div className="title-profileSetting">
+                    <span className="title-profileSetting">
                         <h3><NavLink to="/pageProfile"> Bradley Ortiz </NavLink> <img src={iconePrivate} alt="icone" /> </h3>
                         <p>@bradley...</p>
-                    </div>
+                    </span>
 
-                </div>
-            </div>
-        </div>
+                </span>
+            </span>
+        </span>
     )
 }
 export default SideBar;
