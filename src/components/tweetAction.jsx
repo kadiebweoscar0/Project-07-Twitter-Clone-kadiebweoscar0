@@ -72,7 +72,7 @@ export  function Comment({value, onClick}) {
   const [isHover, setIsHover] = useState("#D9D9D9")
 
   const handleMouseHover = () =>{
-        setIsHover("#0077b6")
+        setIsHover("#00bbf9")
 
   }
 
@@ -107,8 +107,7 @@ export  function Retweet({value, onClick}) {
  const [isHover, setIsHover] = useState("#D9D9D9")
 
   const handleMouseHover = () =>{
-        setIsHover("#6a994e")
-        console.log(isHover);
+        setIsHover("#80ed99")
   }
 
   const handleMouseOut = () =>{
@@ -142,17 +141,38 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
 export  function Like({value, onClick}) {
   const [isLike, setIsLike] = useState(false)
   const [isHover, setIsHover] = useState("#D9D9D9")
+  const [v, setV] = useState(false)
+
+  let styleLike = {
+    backgroundColor: "#d61f3e48",
+    // padding: ".6rem",
+    // borderRadius:"50%",
+    // alignItems: "center"
+  }
+
+  let valueStyle = {
+    color: "#f21b3f"
+  }
+
+  // let styleLik = {
+  //   // backgroundColor: "#d61f3e48",
+  //   padding: ".6rem",
+  //   borderRadius:"50%",
+  //   alignItems: "center"
+  // }
+
   const handleMouseUp = () =>{
     setIsLike(!isLike)
   }
 
   const handleMouseHover = () =>{
-        setIsHover("#c1035b")
-        console.log(isHover);
+        setIsHover("#f21b3f")
+        setV(true)
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
+    setV(false)
   }
 
 const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,10 +188,10 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
         onMouseOut={handleMouseOut}
         title="Like"
       >
-      <span className="hover-cecle">
+      <span className="hover-cecleLike" style={v ? styleLike : {}} >
         {isLike? likeIconWithBg : likeIconEmptyBg}
       </span>
-        <ValueAction value={value} />
+        <ValueAction valueColor={v ? valueStyle : {}} value={value} />
         {/* {actionCount.like}  */}
       </span>
     </>
@@ -181,12 +201,16 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
 export  function Update({value, onClick}) {
   const [isHover, setIsHover] = useState("#D9D9D9")
 
+  let v = false
+
   const handleMouseHover = () =>{
-        setIsHover("#0077b6")
+        setIsHover("#00bbf9")
+        v = true
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
+    v = false
   }
 
 
@@ -203,7 +227,6 @@ const updateIcon =  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         onMouseOut={handleMouseOut}
         title="Share"
       >
-        {handleMouseHover ? console.log("boujour") : console.log("rien")}
       <span className="hover-cecle">
         {updateIcon}
       </span>

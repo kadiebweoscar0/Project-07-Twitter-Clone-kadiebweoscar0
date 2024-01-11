@@ -361,8 +361,8 @@ a{
     color: #c1035b;
 }
 
-.hover-cecle:hover{
-    background-color: #b6b9be36;
+.hover-cecleLike:hover{
+    background-color: #d61f3e48;
 }
 
 /* profile */
@@ -382,7 +382,7 @@ a{
     padding: 1rem 2rem;
 }
 
-.icon-back, .hover-cecle{
+.icon-back, .hover-cecleReply, .hover-cecleRetweet, .hover-cecleLike, .hover-cecleShare{
     padding: .6rem;
     border-radius: 50%;
     align-items: center;
