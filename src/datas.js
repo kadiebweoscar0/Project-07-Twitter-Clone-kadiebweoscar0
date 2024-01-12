@@ -1,9 +1,16 @@
-
+import tweetProfilPhoto from "../public/images/tweet-profile-photo.png"
+import tweetProfil2 from "../public/images/tweetProfil2.svg"
+import tweetImage from "../public/images/tweet-image.png"
+import iconTweeter from "../public/images/iconTweeter.svg"
+import coverCNN from "../public/images/coverCNN.jpeg"
+import coverNewYork from "../public/images/coverNewYork.jpeg"
+import coverTweeter from "../public/images/coverTweeter.jpeg"
+import coverXandTweeter from "../public/images/coverXandTweeter.png"
 
 export const datas = [
     {
         id:1,
-        tweetProfile: "public/images/tweet-profile-photo.png",
+        tweetProfile: tweetProfilPhoto,
         titleAuthor: "CNN",
         titleAddress:"@CNN",
         dateHoursPublication:". 7min",
@@ -16,12 +23,13 @@ export const datas = [
         dateJoined : "joined December 2023",
         following : 6,
         followers: 0,
-        posts: 0
+        posts: 0,
+        cover: coverCNN
     },
 
     {
         id:2,
-        tweetProfile: "public/images/tweetProfil2.svg",
+        tweetProfile: tweetProfil2,
         titleAuthor: "The New York Time",
         titleAddress:"@nytimes",
         dateHoursPublication:". 7min",
@@ -30,16 +38,17 @@ export const datas = [
         tweetActionValue2:48,
         tweetActionValue3:482,
         tweetActionValue4:19,
-        imageTweet:"public/images/tweet-image.png",
+        imageTweet: tweetImage,
         dateJoined : "joined December 2021",
         following : 16,
         followers: 10,
-        posts: 20
+        posts: 20,
+        cover: coverNewYork
     },
 
     {
         id:3,
-        tweetProfile: "public/images/iconTweeter.svg",
+        tweetProfile: iconTweeter,
         titleAuthor: "Twitter",
         titleAddress:"@Twitter",
         dateHoursPublication:". OCT 29",
@@ -52,12 +61,13 @@ export const datas = [
         dateJoined : "joined December 2018",
         following : 61,
         followers: 80,
-        posts: 23
+        posts: 23,
+        cover: coverTweeter
     },
 
     {
         id:4,
-        tweetProfile: "public/images/iconTweeter.svg",
+        tweetProfile: iconTweeter,
         titleAuthor: "Twitter",
         titleAddress:"@Twitter",
         dateHoursPublication:". OCT 4",
@@ -70,12 +80,13 @@ export const datas = [
         dateJoined : "joined December 2024",
         following : 6,
         followers: 5,
-        posts: 3
+        posts: 3,
+        cover: coverTweeter
     },
 
     {
         id:5,
-        tweetProfile: "public/images/iconTweeter.svg",
+        tweetProfile: iconTweeter,
         titleAuthor: "Twitter",
         titleAddress:"@Twitter",
         dateHoursPublication:". OCT 4",
@@ -84,10 +95,11 @@ export const datas = [
         tweetActionValue2:785.4,
         tweetActionValue3:3.3,
         tweetActionValue4:"",
-        imageTweet:"public/images/tweet-image.png",
+        imageTweet: tweetImage,
         dateJoined : "joined December 2020",
         following : 69,
         followers: 70,
-        posts: 31
+        posts: 31,
+        cover: coverTweeter
     }
 ]

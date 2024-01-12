@@ -19,50 +19,44 @@ function NavBar() {
 
             <li>
                 <NavLink to="/explore">
-                    <img src={iconeExplore} alt="icone" /> 
+                    <img src={iconeExplore} alt="icone" /> Explore
                 </NavLink>
-                Explore
             </li>
 
             <li>
                 <NavLink to="/notifiaction">
-                    <img src={iconeNotifications} alt="icone" /> 
+                    <img src={iconeNotifications} alt="icone" /> Notifications
                 </NavLink>
-                Notifications
             </li>
 
             <li>
                 <NavLink to="/messages">
-                    <img src={iconeMessage} alt="icone" /> 
+                    <img src={iconeMessage} alt="icone" /> Messages
                 </NavLink>
-                Messages
             </li>
 
             <li>
                 <NavLink to="/bookmarks">
-                    <img src={iconeBookMarks} alt="icone" /> 
+                    <img src={iconeBookMarks} alt="icone" /> Bookmarks
                 </NavLink>
-                Bookmarks
             </li>
 
             <li>
                 <NavLink to="/lists">
-                    <img src={iconeLists} alt="icone" /> 
+                    <img src={iconeLists} alt="icone" /> Lists
                 </NavLink>
-                Lists
             </li>
 
             <li>
                 <NavLink to="/pageProfile">
-                    <img src={iconeProfile} alt="icone" />Profile
+                    <img src={iconeProfile} alt="icone" /> Profile
                 </NavLink>
             </li>
 
             <li>
                 <NavLink to="/more">
-                    <img src={iconeMore} alt="icone" /> 
+                    <img src={iconeMore} alt="icone" /> More
                 </NavLink>
-                More
             </li>
         </ul>
     )
