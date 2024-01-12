@@ -321,10 +321,12 @@ body{
 
 .trendsText div{
     padding: 5px 0;
+    
 }
 
 .trendsText div h3{
-    padding: 3px 0;
+    padding: 2px 0;
+    font-size: 0.90rem;
 }
 
 p{

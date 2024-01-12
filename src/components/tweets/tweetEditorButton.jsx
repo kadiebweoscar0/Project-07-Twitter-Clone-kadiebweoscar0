@@ -1,10 +1,10 @@
 
-import iconMedia from "../../images/iconeMedia.svg";
-import iconGif from "../../images/iconGif.svg";
-import iconPoll from "../../images/iconPoll.svg";
-import iconSchedoule from "../../images/iconSchedoule.svg";
+import iconMedia from "../../../public/images/iconeMedia.svg";
+import iconGif from "../../../public/images/iconGif.svg";
+import iconPoll from "../../../public/images/iconPoll.svg";
+import iconSchedoule from "../../../public/images/iconSchedoule.svg";
 import TweeEditorAction from "./tweeEditorAction";
-import iconEmoji from "../../images/iconEmoji.svg"
+import iconEmoji from "../../../public/images/iconEmoji.svg"
 import Button from "../button";
 
 function TweetEditorButton() {

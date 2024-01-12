@@ -1,6 +1,6 @@
 import Avatar from "../avatar"
-import tweetProfil2 from "../../images/tweetProfil2.svg"
-import tweetProfilePhoto from "../../images/tweet-profile-photo.png"
+import tweetProfil2 from "../../../public/images/tweetProfil2.svg"
+import tweetProfilePhoto from "../../../public/images/tweet-profile-photo.png"
 import TweetTitleAuthor from "../tweets/tweetTitleAuthor"
 import Button from "../button"
 

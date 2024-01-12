@@ -1,5 +1,5 @@
 import TweetEditorForm from "./tweetEditorForm";
-import imageProfil from "../../images/profile-photo.png";
+import imageProfil from "../../../public/images/profile-photo.png";
 import Avatar from "../avatar";
 
 function TweetEditor() {

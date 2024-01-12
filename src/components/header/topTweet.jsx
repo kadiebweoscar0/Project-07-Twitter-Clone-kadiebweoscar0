@@ -1,4 +1,4 @@
-import logo from "../../images/top_tweet.svg"
+import logo from "../../../public/images/top_tweet.svg"
 
 function TopTweet() {
     return(

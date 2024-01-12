@@ -1,11 +1,12 @@
-import imageProfil from "../../images/profile-photo.png";
+import imageProfil from "/images/profile-photo.png";
 import ImageDefault from "../imageDefault";
-import iconBacak from "../../images/iconBack.svg"
-import imageCover from "../../images/tweet-image.png"
+import iconBacak from "/images/iconBack.svg"
+import imageCover from "/images/tweet-image.png"
 import Button from "../button";
 import { NavLink, useParams } from "react-router-dom";
 import { datas } from "../../datas";
 import TweetContent from "../tweets/tweetContent";
+import Avatar from "../avatar";
 
 
 
@@ -40,12 +41,11 @@ export default function Profile() {
                 <UserName username={data.titleAuthor} numberPost={data.posts} />
             </div>
             <span className="image-cover">
-                <ImageDefault urlImage={data.tweetProfile} />
+                <ImageDefault urlImage={data.imageTweet} />
             </span>
             <span className="profil-author-and-button-editor">
                 <span className="profil-author">
-                    <ImageDefault urlImage={data.tweetProfile} />
-                    
+                    <Avatar avatar={data.tweetProfile} />
                 </span>
                 <Button className="button" textButton='edit profil' />
             </span>

@@ -1,6 +1,6 @@
 import ImageDefault from "../imageDefault"
-import iconeTreeDot from "../../images/iconeTreeDot.svg"
-import iconeSeting from "../../images/iconeSeting.svg"
+import iconeTreeDot from "../../../public/images/iconeTreeDot.svg"
+import iconeSeting from "../../../public/images/iconeSeting.svg"
 import { NavLink } from "react-router-dom"
 
 

@@ -1,9 +1,9 @@
 import Avatar from "../avatar";
 import Button from "../button";
 import NavBar from "./navbar";
-import imageProfil from "../../images/profile-photo.png";
-import iconePrivate from "../../images/iconePrivate.svg"
-import iconeTweeterSideBar from "../../images/iconeTweeterSideBar.svg"
+import imageProfil from "/images/profile-photo.png";
+import iconePrivate from "/images/iconePrivate.svg"
+import iconeTweeterSideBar from "../../../public/images/iconeTweeterSideBar.svg"
 import { NavLink } from "react-router-dom";
 
 function SideBar() {

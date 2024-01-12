@@ -3,7 +3,7 @@
 export const datas = [
     {
         id:1,
-        tweetProfile: "src/images/tweet-profile-photo.png",
+        tweetProfile: "public/images/tweet-profile-photo.png",
         titleAuthor: "CNN",
         titleAddress:"@CNN",
         dateHoursPublication:". 7min",
@@ -21,7 +21,7 @@ export const datas = [
 
     {
         id:2,
-        tweetProfile: "src/images/tweetProfil2.svg",
+        tweetProfile: "public/images/tweetProfil2.svg",
         titleAuthor: "The New York Time",
         titleAddress:"@nytimes",
         dateHoursPublication:". 7min",
@@ -30,7 +30,7 @@ export const datas = [
         tweetActionValue2:48,
         tweetActionValue3:482,
         tweetActionValue4:19,
-        imageTweet:"src/images/tweet-image.png",
+        imageTweet:"public/images/tweet-image.png",
         dateJoined : "joined December 2021",
         following : 16,
         followers: 10,
@@ -39,7 +39,7 @@ export const datas = [
 
     {
         id:3,
-        tweetProfile: "src/images/iconTweeter.svg",
+        tweetProfile: "public/images/iconTweeter.svg",
         titleAuthor: "Twitter",
         titleAddress:"@Twitter",
         dateHoursPublication:". OCT 29",
@@ -57,7 +57,7 @@ export const datas = [
 
     {
         id:4,
-        tweetProfile: "src/images/iconTweeter.svg",
+        tweetProfile: "public/images/iconTweeter.svg",
         titleAuthor: "Twitter",
         titleAddress:"@Twitter",
         dateHoursPublication:". OCT 4",
@@ -75,7 +75,7 @@ export const datas = [
 
     {
         id:5,
-        tweetProfile: "src/images/iconTweeter.svg",
+        tweetProfile: "public/images/iconTweeter.svg",
         titleAuthor: "Twitter",
         titleAddress:"@Twitter",
         dateHoursPublication:". OCT 4",
@@ -84,7 +84,7 @@ export const datas = [
         tweetActionValue2:785.4,
         tweetActionValue3:3.3,
         tweetActionValue4:"",
-        imageTweet:"src/images/tweet-image.png",
+        imageTweet:"public/images/tweet-image.png",
         dateJoined : "joined December 2020",
         following : 69,
         followers: 70,
