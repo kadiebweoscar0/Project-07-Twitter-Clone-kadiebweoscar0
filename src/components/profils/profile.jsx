@@ -1,11 +1,11 @@
-import imageProfil from "../images/profile-photo.png";
-import ImageDefault from "./imageDefault";
-import iconBacak from "../images/iconBack.svg"
-import imageCover from "../images/tweet-image.png"
-import Button from "./button";
+import imageProfil from "../../images/profile-photo.png";
+import ImageDefault from "../imageDefault";
+import iconBacak from "../../images/iconBack.svg"
+import imageCover from "../../images/tweet-image.png"
+import Button from "../button";
 import { NavLink, useParams } from "react-router-dom";
-import { datas } from "../datas";
-import TweetContent from "./tweets/tweetContent";
+import { datas } from "../../datas";
+import TweetContent from "../tweets/tweetContent";
 
 
 

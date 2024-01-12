@@ -1,6 +1,6 @@
-import ImageDefault from "./imageDefault";
-import TweetEditorInput from "./tweets/tweetEditorInput";
-import iconeSearch from "../images/iconeSearch.svg";
+import ImageDefault from "../imageDefault";
+import TweetEditorInput from "../tweets/tweetEditorInput";
+import iconeSearch from "../../images/iconeSearch.svg";
 
 function Search() {
     return(
