@@ -1,4 +1,4 @@
-import ImageDefault from "./imageDefault"
+import ImageDefault from "../imageDefault"
 
 function TweetImage(props) {
 

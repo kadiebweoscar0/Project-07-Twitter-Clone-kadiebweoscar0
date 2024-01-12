@@ -1,11 +1,11 @@
 
-import iconMedia from "../images/iconeMedia.svg";
-import iconGif from "../images/iconGif.svg";
-import iconPoll from "../images/iconPoll.svg";
-import iconSchedoule from "../images/iconSchedoule.svg";
+import iconMedia from "../../images/iconeMedia.svg";
+import iconGif from "../../images/iconGif.svg";
+import iconPoll from "../../images/iconPoll.svg";
+import iconSchedoule from "../../images/iconSchedoule.svg";
 import TweeEditorAction from "./tweeEditorAction";
-import iconEmoji from "../images/iconEmoji.svg"
-import Button from "./button";
+import iconEmoji from "../../images/iconEmoji.svg"
+import Button from "../button";
 
 function TweetEditorButton() {
     return(

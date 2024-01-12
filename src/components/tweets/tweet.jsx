@@ -1,6 +1,6 @@
-import Avatar from "./avatar";
+import Avatar from "../avatar";
 import TweetContent from "./tweetContent";
-import { datas } from "../datas";
+import { datas } from "../../datas";
 import { NavLink } from "react-router-dom";
 
 function Tweet() {

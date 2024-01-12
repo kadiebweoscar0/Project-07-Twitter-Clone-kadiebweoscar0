@@ -5,6 +5,7 @@ import imageCover from "../images/tweet-image.png"
 import Button from "./button";
 import { NavLink, useParams } from "react-router-dom";
 import { datas } from "../datas";
+import TweetContent from "./tweets/tweetContent";
 
 
 
@@ -65,4 +66,28 @@ export default function Profile() {
             
         </div>
     );
+}
+
+
+export  function Post() {
+  return (
+    <>
+    {datas.map((data) => (
+        <div className="tweet" key={data.id}>
+            <TweetContent
+                tweetTextValue={data.tweetTextValue}
+                tweetActionValue1={data.tweetActionValue1}
+                tweetActionValue2={data.tweetActionValue2}
+                tweetActionValue3={data.tweetActionValue3}
+                tweetActionValue4={data.tweetActionValue4}
+                id={data.id}
+                titleAuthor={data.titleAuthor}
+                titleAddress={data.titleAddress}
+                dateHoursPublication={data.dateHoursPublication}
+                urlImage={data.imageTweet}
+            />
+        </div>
+    ))}
+    </>
+  )
 }

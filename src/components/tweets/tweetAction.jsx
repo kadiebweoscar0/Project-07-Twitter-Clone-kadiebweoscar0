@@ -1,5 +1,5 @@
 import TweeEditorAction from "./tweeEditorAction";
-import ValueAction from "./valueAction";
+import ValueAction from "../valueAction";
 import { useState } from "react";
 
 const likeIconWithBg = <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

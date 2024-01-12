@@ -17,13 +17,12 @@ export const datas = [
         following : 6,
         followers: 0,
         posts: 0
-
     },
 
     {
         id:2,
         tweetProfile: "src/images/tweetProfil2.svg",
-        titleAuthor: "THE NEW YORK TIME",
+        titleAuthor: "The New York Time",
         titleAddress:"@nytimes",
         dateHoursPublication:". 7min",
         tweetTextValue:"Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land",

@@ -1,4 +1,4 @@
-import iconVerified from "../images/iconVerified.svg"
+import iconVerified from "../../images/iconVerified.svg"
 
 function TweetTitleAuthor(props) {
     return(

@@ -1,5 +1,5 @@
 import React from 'react';
-import Timeline from '../components/timeline';
+import Timeline from '../components/timeline/timeline';
 import SideBar from '../components/sidebar';
 import Trends from '../components/trends';
 

@@ -1,6 +1,6 @@
-import Header from "./header"
-import Tweets from "./tweets"
-import TweetEditor from "./tweetEditor"
+import Tweets from "../tweets"
+import TweetEditor from "../tweets/tweetEditor"
+import Header from "../header/header"
 
 
 

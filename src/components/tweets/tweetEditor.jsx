@@ -1,6 +1,6 @@
-import Avatar from "./avatar";
 import TweetEditorForm from "./tweetEditorForm";
-import imageProfil from "../images/profile-photo.png";
+import imageProfil from "../../images/profile-photo.png";
+import Avatar from "../avatar";
 
 function TweetEditor() {
     return(
@@ -10,5 +10,4 @@ function TweetEditor() {
         </div>
     )
 }
-
 export default TweetEditor
