@@ -1,11 +1,11 @@
-import iconeHome from '../images/iconeHome.svg'; 
-import iconeNotifications from '../images/iconeNotification.svg'
-import iconeExplore from '../images/iconeExplore.svg';
-import iconeMessage from '../images/iconeMessages.svg';
-import iconeLists from '../images/iconeLists.svg';
-import iconeBookMarks from '../images/iconeBookmarks.svg';
-import iconeMore from '../images/iconeMore.svg';
-import iconeProfile from '../images/iconeProfile.svg';
+import iconeHome from '../../images/iconeHome.svg'; 
+import iconeNotifications from '../../images/iconeNotification.svg'
+import iconeExplore from '../../images/iconeExplore.svg';
+import iconeMessage from '../../images/iconeMessages.svg';
+import iconeLists from '../../images/iconeLists.svg';
+import iconeBookMarks from '../../images/iconeBookmarks.svg';
+import iconeMore from '../../images/iconeMore.svg';
+import iconeProfile from '../../images/iconeProfile.svg';
 import { NavLink } from 'react-router-dom';
 
 function NavBar() {

@@ -1,4 +1,4 @@
-import Tweet from "./tweets/tweet";
+import Tweet from "./tweet";
 
 
 function Tweets() {

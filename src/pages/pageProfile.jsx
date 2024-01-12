@@ -1,5 +1,5 @@
 import Profile from "../components/profile";
-import SideBar from "../components/sidebar";
+import SideBar from "../components/sidebars/sidebar";
 import Trends from "../components/trends";
 
 function PageProfile() {

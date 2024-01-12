@@ -1,4 +1,4 @@
-import Tweets from "../tweets"
+import Tweets from "../tweets/tweets"
 import TweetEditor from "../tweets/tweetEditor"
 import Header from "../header/header"
 
