@@ -1,7 +1,7 @@
 
 function ValueAction(props) {
     return(
-        <p style={props.style}>{props.value}</p>
+        <p className={props.classNameValueAction} style={props.style}>{props.value}</p>
     )
 }
 export default ValueAction

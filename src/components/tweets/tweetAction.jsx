@@ -204,7 +204,7 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
       <span className="hover-cecle" style={v ? styleLike : {}} >
         {isLike? likeIconWithBg : likeIconEmptyBg}
       </span>
-        <ValueAction style={v ? valueStyle : {}} value={value} />
+        <ValueAction classNameValueAction={isLike? "valueStyleLike" : ""}  style={v ? valueStyle : {}} value={value} />
         {/* {actionCount.like}  */}
       </span>
     </>

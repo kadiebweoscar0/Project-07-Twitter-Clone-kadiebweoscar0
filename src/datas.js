@@ -62,7 +62,7 @@ export const datas = [
         following : 61,
         followers: 80,
         posts: 23,
-        cover: coverTweeter
+        cover: coverXandTweeter
     },
 
     {
@@ -81,7 +81,7 @@ export const datas = [
         following : 6,
         followers: 5,
         posts: 3,
-        cover: coverTweeter
+        cover: coverXandTweeter
     },
 
     {
@@ -100,6 +100,6 @@ export const datas = [
         following : 69,
         followers: 70,
         posts: 31,
-        cover: coverTweeter
+        cover: coverXandTweeter
     }
 ]

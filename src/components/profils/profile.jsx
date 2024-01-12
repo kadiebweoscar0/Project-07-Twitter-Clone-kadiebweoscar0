@@ -41,11 +41,11 @@ export default function Profile() {
                 <UserName username={data.titleAuthor} numberPost={data.posts} />
             </div>
             <span className="image-cover">
-                <ImageDefault urlImage={data.imageTweet} />
+                <ImageDefault urlImage={data.cover} />
             </span>
             <span className="profil-author-and-button-editor">
                 <span className="profil-author">
-                    <Avatar avatar={data.tweetProfile} />
+                    <Avatar myClassName="avatar-style-profile" avatar={data.tweetProfile} />
                 </span>
                 <Button className="button" textButton='edit profil' />
             </span>
@@ -54,7 +54,6 @@ export default function Profile() {
                 <UserName username={data.titleAuthor} numberPost={data.titleAddress} />
                 <p>{data.dateJoined}</p>
                 <p>{data.following} following   {data.followers} followers</p>
-
             </div>
             <ul className="user-info">
                 <li>Post</li>
