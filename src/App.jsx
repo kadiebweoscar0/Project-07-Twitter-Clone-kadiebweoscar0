@@ -3,7 +3,6 @@ import Layout from "./components/layout.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pageprofile from "./pages/pageProfile.jsx";
 import { datas } from "./datas.js";
-import PostProfile from "./components/profils/postProfile.jsx";
 
 
 import('./style/reset.css');
@@ -15,8 +14,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/pageProfile/:id" element={<Pageprofile />} >
-            <Route index element={<PostProfile />} />
+          <Route path="/pageProfile" element={<Pageprofile />} >
+            <Route path=":id"  element={<Pageprofile />} />
           </Route>
         </Routes>
       </BrowserRouter>

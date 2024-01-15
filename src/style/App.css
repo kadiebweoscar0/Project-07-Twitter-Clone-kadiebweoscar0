@@ -150,6 +150,7 @@ body{
 }
 .tweet-title-author{
     font-size: 1rem;
+    display: flex;
 }
 .tweet-title-details{
     color: #6E767D;
@@ -442,7 +443,6 @@ a{
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    height: 7%;
     border-bottom: 1px solid #2F3336;
 }
 
