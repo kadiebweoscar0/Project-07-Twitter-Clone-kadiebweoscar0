@@ -2,11 +2,6 @@ import Avatar from "../avatar";
 import TweetContent from "./tweetContent";
 import { datas } from "../../datas";
 import { NavLink } from "react-router-dom";
-import TweetTitleAuthor from "./tweetTitleAuthor";
-import TweetTitleDetail from "./tweetTitleDetail";
-import TweetText from "./tweetText";
-import TweetImage from "./tweetImage";
-import TweetAction from "./tweetAction";
 
 function Tweet() {
     return(
