@@ -99,7 +99,23 @@ export default function Profile() {
                 <li>Media</li>
                 <li>Likes</li>
             </ul>
-            <Tweet />
+            <div className="tweet" key={data.id}>
+                <NavLink to={`/pageProfile/${data.id}`} >
+                    <Avatar avatar={data.tweetProfile} myClassName="tweet-avatar" />
+                </NavLink>
+                     <TweetContent
+                        tweetTextValue={data.tweetTextValue}
+                        tweetActionValue1={data.tweetActionValue1}
+                        tweetActionValue2={data.tweetActionValue2}
+                        tweetActionValue3={data.tweetActionValue3}
+                        tweetActionValue4={data.tweetActionValue4}
+                        id={data.id}
+                        titleAuthor={data.titleAuthor}
+                        titleAddress={data.titleAddress}
+                        dateHoursPublication={data.dateHoursPublication}
+                        urlImage={data.imageTweet}
+                    />
+                </div>
             
         </div>
     );
