@@ -26,8 +26,8 @@ export default function Profile() {
     const useParam = useParams()
     const {id} = useParam
 
-    const data = datas.find((data) => data.id == id)
-    if (!data) {
+    const datafind = datas.find((data) => data.id == id)
+    if (!datafind) {
        return(
         <div className="profile">
             <div className="entete">
@@ -75,22 +75,22 @@ export default function Profile() {
                     </span>
                 </NavLink>
                
-                <UserName username={data.titleAuthor} numberPost={data.posts} />
+                <UserName username={datafind.titleAuthor} numberPost={datafind.posts} />
             </div>
             <span className="image-cover">
-                <ImageDefault urlImage={data.cover} />
+                <ImageDefault urlImage={datafind.cover} />
             </span>
             <span className="profil-author-and-button-editor">
                 <span className="profil-author">
-                    <Avatar myClassName="avatar-style-profile" avatar={data.tweetProfile} />
+                    <Avatar myClassName="avatar-style-profile" avatar={datafind.tweetProfile} />
                 </span>
                 <Button className="button" textButton='edit profil' />
             </span>
            
             <div className="detail-author">
-                <UserName username={data.titleAuthor} userAdress={data.titleAddress} />
-                <p>{data.dateJoined}</p>
-                <p>{data.following} following   {data.followers} followers</p>
+                <UserName username={datafind.titleAuthor} userAdress={datafind.titleAddress} />
+                <p>{datafind.dateJoined}</p>
+                <p>{datafind.following} following   {datafind.followers} followers</p>
             </div>
             <ul className="user-info">
                 <li>Post</li>
@@ -99,21 +99,21 @@ export default function Profile() {
                 <li>Media</li>
                 <li>Likes</li>
             </ul>
-            <div className="tweet" key={data.id}>
-                <NavLink to={`/pageProfile/${data.id}`} >
-                    <Avatar avatar={data.tweetProfile} myClassName="tweet-avatar" />
+            <div className="tweet" key={datafind.id}>
+                <NavLink to={`/pageProfile/${datafind.id}`} >
+                    <Avatar avatar={datafind.tweetProfile} myClassName="tweet-avatar" />
                 </NavLink>
                      <TweetContent
-                        tweetTextValue={data.tweetTextValue}
-                        tweetActionValue1={data.tweetActionValue1}
-                        tweetActionValue2={data.tweetActionValue2}
-                        tweetActionValue3={data.tweetActionValue3}
-                        tweetActionValue4={data.tweetActionValue4}
-                        id={data.id}
-                        titleAuthor={data.titleAuthor}
-                        titleAddress={data.titleAddress}
-                        dateHoursPublication={data.dateHoursPublication}
-                        urlImage={data.imageTweet}
+                        tweetTextValue={datafind.tweetTextValue}
+                        tweetActionValue1={datafind.tweetActionValue1}
+                        tweetActionValue2={datafind.tweetActionValue2}
+                        tweetActionValue3={datafind.tweetActionValue3}
+                        tweetActionValue4={datafind.tweetActionValue4}
+                        id={datafind.id}
+                        titleAuthor={datafind.titleAuthor}
+                        titleAddress={datafind.titleAddress}
+                        dateHoursPublication={datafind.dateHoursPublication}
+                        urlImage={datafind.imageTweet}
                     />
                 </div>
             
