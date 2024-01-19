@@ -100,7 +100,7 @@ export default function Profile() {
                 <li>Likes</li>
             </ul>
             <div className="tweet" key={datafind.id}>
-                <NavLink to={`/pageProfile/${datafind.id}`} >
+                <NavLink to={`/${datafind.titleAuthor}`} >
                     <Avatar avatar={datafind.tweetProfile} myClassName="tweet-avatar" />
                 </NavLink>
                      <TweetContent

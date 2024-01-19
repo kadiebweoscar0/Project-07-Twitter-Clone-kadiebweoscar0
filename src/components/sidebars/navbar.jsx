@@ -48,7 +48,7 @@ function NavBar() {
             </li>
 
             <li>
-                <NavLink to="/pageProfile">
+                <NavLink to="/Bradley-Ortiz">
                     <img src={iconeProfile} alt="icone" /> Profile
                 </NavLink>
             </li>

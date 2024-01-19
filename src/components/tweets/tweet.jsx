@@ -8,7 +8,7 @@ function Tweet() {
         <>
             {datas.map((data) => (
                 <div className="tweet" key={data.id}>
-                <NavLink to={`/${data.id}`} >
+                <NavLink to={`/${data.titleAuthor}`} >
                     <Avatar avatar={data.tweetProfile} myClassName="tweet-avatar" />
                 </NavLink>
                      <TweetContent

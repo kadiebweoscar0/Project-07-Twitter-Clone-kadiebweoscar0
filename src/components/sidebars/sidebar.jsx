@@ -16,11 +16,11 @@ function SideBar() {
                 <Button className="button-navBar" textButton="Tweet" />
                 </span> 
                 <span className="profileSetting"> 
-                <NavLink to="/pageProfile">
+                <NavLink to="/Bradley-Ortiz">
                     <Avatar myClassName="profilePhoto-setting" avatar={imageProfil} />
                 </NavLink>
                     <span className="title-profileSetting">
-                        <h3><NavLink to="/pageProfile/Bradley-Ortiz"> Bradley Ortiz </NavLink> <img src={iconePrivate} alt="icone" /> </h3>
+                        <h3><NavLink to="/Bradley-Ortiz"> Bradley Ortiz </NavLink> <img src={iconePrivate} alt="icone" /> </h3>
                         <p>@bradley...</p>
                     </span>
 
