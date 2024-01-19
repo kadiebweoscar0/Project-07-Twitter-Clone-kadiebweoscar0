@@ -24,9 +24,9 @@ export function UserName(props) {
 
 export default function Profile() {
     const useParam = useParams()
-    const {id} = useParam
+    const {name} = useParam
 
-    const datafind = datas.find((data) => data.id == id)
+    const datafind = datas.find((data) => data.titleAuthor == name)
     if (!datafind) {
        return(
         <div className="profile">
