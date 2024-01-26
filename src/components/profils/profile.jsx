@@ -7,7 +7,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { datas } from "../../datas";
 import TweetContent from "../tweets/tweetContent";
 import Avatar from "../avatar";
-import Tweet from "../tweets/tweet";
+import Tweets from "../tweets/tweets";
 
 
 
@@ -26,9 +26,11 @@ export default function Profile() {
     const useParam = useParams()
     const {name} = useParam
 
-    const datafind = datas.find((data) => data.titleAuthor == name)
-    if (!datafind) {
-       return(
+  const user = Object.values(datas).find((user) => user.credential_user.titleAuthor === name);
+    
+ 
+    if (!user) {
+       return(  
         <div className="profile">
             <div className="entete">
                 <NavLink to="/">
@@ -61,7 +63,7 @@ export default function Profile() {
                 <li>Media</li>
                 <li>Likes</li>
             </ul>
-            <Tweet />
+            <Tweets />
         </div>
        )
     }
@@ -75,22 +77,22 @@ export default function Profile() {
                     </span>
                 </NavLink>
                
-                <UserName username={datafind.titleAuthor} numberPost={datafind.posts} />
+                <UserName username={user.credential_user.titleAuthor} numberPost={user.credential_user.posts} />
             </div>
             <span className="image-cover">
-                <ImageDefault urlImage={datafind.cover} />
+                <ImageDefault urlImage={user.credential_user.cover} />
             </span>
             <span className="profil-author-and-button-editor">
                 <span className="profil-author">
-                    <Avatar myClassName="avatar-style-profile" avatar={datafind.tweetProfile} />
+                    <Avatar myClassName="avatar-style-profile" avatar={user.credential_user.tweetProfile} />
                 </span>
                 <Button className="button" textButton='edit profil' />
             </span>
            
             <div className="detail-author">
-                <UserName username={datafind.titleAuthor} userAdress={datafind.titleAddress} />
-                <p>{datafind.dateJoined}</p>
-                <p>{datafind.following} following   {datafind.followers} followers</p>
+                <UserName username={user.credential_user.titleAuthor} userAdress={user.credential_user.titleAddress} />
+                <p>{user.credential_user.dateJoined}</p>
+                <p>{user.credential_user.following} following   {user.credential_user.followers} followers</p>
             </div>
             <ul className="user-info">
                 <li>Post</li>
@@ -99,24 +101,29 @@ export default function Profile() {
                 <li>Media</li>
                 <li>Likes</li>
             </ul>
-            <div className="tweet" key={datafind.id}>
-                <NavLink to={`/${datafind.titleAuthor}`} >
-                    <Avatar avatar={datafind.tweetProfile} myClassName="tweet-avatar" />
-                </NavLink>
-                     <TweetContent
-                        tweetTextValue={datafind.tweetTextValue}
-                        tweetActionValue1={datafind.tweetActionValue1}
-                        tweetActionValue2={datafind.tweetActionValue2}
-                        tweetActionValue3={datafind.tweetActionValue3}
-                        tweetActionValue4={datafind.tweetActionValue4}
-                        id={datafind.id}
-                        titleAuthor={datafind.titleAuthor}
-                        titleAddress={datafind.titleAddress}
-                        dateHoursPublication={datafind.dateHoursPublication}
-                        urlImage={datafind.imageTweet}
-                    />
+            {user.tweets && user.tweets.map((tweet, index) => (
+                <div className="tweet" key={user.credential_user.id}>
+                    <NavLink to={`/${user.credential_user.titleAuthor}`} >
+                        <Avatar avatar={user.credential_user.tweetProfile} myClassName="tweet-avatar" />
+                    </NavLink>
+                    {/* Affichage des tweets */}
+                        <TweetContent
+                            key={index}
+                            tweetTextValue={tweet.tweetTextValue}
+                            tweetActionValue1={tweet.tweetActionValue1}
+                            tweetActionValue2={tweet.tweetActionValue2}
+                            tweetActionValue3={tweet.tweetActionValue3}
+                            tweetActionValue4={tweet.tweetActionValue4}
+                            id={user.credential_user.id}
+                            titleAuthor={user.credential_user.titleAuthor}
+                            titleAddress={user.credential_user.titleAddress}
+                            dateHoursPublication={user.credential_user.dateHoursPublication}
+                            urlImage={tweet.imageTweet}
+                            />
                 </div>
-            
+            ))}      
         </div>
+            
+        
     );
 }
