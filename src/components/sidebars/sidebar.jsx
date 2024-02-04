@@ -11,13 +11,13 @@ function SideBar() {
         <span className="sidebar">
             <span className="navBar">
                 <span>
-                <Avatar myClassName="iconeTweeterSideBar" avatar={iconeTweeterSideBar} />
+                <Avatar myClassName="iconeTweeterSideBar" urlAvatr={iconeTweeterSideBar} />
                 <NavBar />
                 <Button className="button-navBar" textButton="Tweet" />
                 </span> 
                 <span className="profileSetting"> 
                 <NavLink to="/Bradley-Ortiz">
-                    <Avatar myClassName="profilePhoto-setting" avatar={imageProfil} />
+                    <Avatar myClassName="profilePhoto-setting" urlAvatr={imageProfil} />
                 </NavLink>
                     <span className="title-profileSetting">
                         <h3><NavLink to="/Bradley-Ortiz"> Bradley Ortiz </NavLink> <img src={iconePrivate} alt="icone" /> </h3>

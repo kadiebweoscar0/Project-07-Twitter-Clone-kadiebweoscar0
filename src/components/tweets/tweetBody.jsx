@@ -5,9 +5,9 @@ import TweetTitle from "./tweetTitle";
 function TweetBody(props) {
     return(
         <div className="tweet-body">
-            <TweetTitle id={props.id} titleAuthor={props.titleAuthor} titleAddress={props.titleAddress} dateHoursPublication={props.dateHoursPublication} />
-            <TweetText tweetTextValue={props.tweetTextValue} />
-            <TweetImage urlImage={props.urlImage} />
+            <TweetTitle />
+            <TweetText  />
+            <TweetImage />
         </div>
     )
 }

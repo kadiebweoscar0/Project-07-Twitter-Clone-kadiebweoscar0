@@ -1,18 +1,22 @@
 import { NavLink } from "react-router-dom";
 import TweetTitleAuthor from "./tweetTitleAuthor";
 import TweetTitleDetail from "./tweetTitleDetail";
+import { useContext } from "react";
+import ContexteTweet from "../../asset/contexteTweet";
 
 
-function TweetTitle(props) {
+function TweetTitle() {
+    const infoAuthor = useContext(ContexteTweet)
+
     return(
         <div className="tweet-title">
-            <NavLink to={`/${props.titleAuthor}`} >
-                <TweetTitleAuthor myStyleTitleAuthor="tweet-title-author" titleAuthor={props.titleAuthor} />
+            <NavLink to={`/${infoAuthor.titleAuthor}`} >
+                <TweetTitleAuthor titleAuthor={infoAuthor.titleAuthor} />
             </NavLink>
-            <NavLink to={`/${props.titleAuthor}`} >
-                <TweetTitleDetail styleTitleDetail="tweet-title-details" titleAddress={props.titleAddress} />
+            <NavLink to={`/${infoAuthor.titleAuthor}`} >
+                <TweetTitleDetail styleTitleDetail="tweet-title-details" titleAddress={infoAuthor.titleAddress} />
             </NavLink>
-            <TweetTitleDetail styleTitleDetail="tweet-title-details" dateHoursPublication={props.dateHoursPublication} />
+            <TweetTitleDetail styleTitleDetail="tweet-title-details" dateHoursPublication={infoAuthor.dateHoursPublication} />
         </div>
     )
 }

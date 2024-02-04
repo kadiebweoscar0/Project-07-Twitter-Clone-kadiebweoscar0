@@ -1,30 +1,28 @@
+import { useContext } from "react";
 import Avatar from "../avatar";
 import TweetContent from "./tweetContent";
-import { datas } from "../../datas";
 import { NavLink } from "react-router-dom";
+import ContexteTweet from "../../asset/contexteTweet";
 
-
-function Tweet({user, data, key}) {
+function Tweet() {
+    const dataTweet = useContext(ContexteTweet);
     
     return(
         <>
-            <div className="tweet" key={key}>
-                <NavLink to={`/${user.titleAuthor}`} >
-                    <Avatar avatar={user.tweetProfile} myClassName="tweet-avatar" />
-                </NavLink>
-                <TweetContent
-                    tweetTextValue={data.tweetTextValue}
-                    tweetActionValue1={data.tweetActionValue1}
-                    tweetActionValue2={data.tweetActionValue2}
-                    tweetActionValue3={data.tweetActionValue3}
-                    tweetActionValue4={data.tweetActionValue4}
-                    id={user.name}
-                    titleAuthor={user.titleAuthor}
-                    titleAddress={user.titleAddress}
-                    dateHoursPublication={user.dateHoursPublication}
-                    urlImage={data.imageTweet}
-                />
-            </div>
+            {dataTweet.tweetTextValue &&
+                <div className="tweet" key={dataTweet.id}>
+                    <NavLink to={`/${dataTweet.titleAuthor}`} >
+                        <Avatar urlAvatr={dataTweet.tweetProfile} />
+                    </NavLink>
+                    <TweetContent
+                        tweetActionValue1={dataTweet.tweetActionValue1}
+                        tweetActionValue2={dataTweet.tweetActionValue2}
+                        tweetActionValue3={dataTweet.tweetActionValue3}
+                        tweetActionValue4={dataTweet.tweetActionValue4}
+                    //     id={user.name}
+                    />
+                </div>
+            }
         </>
     )
 }

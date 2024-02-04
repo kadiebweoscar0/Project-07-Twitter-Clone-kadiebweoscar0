@@ -1,11 +1,12 @@
 import TweetEditorForm from "./tweetEditorForm";
 import imageProfil from "../../../public/images/profile-photo.png";
 import Avatar from "../avatar";
+import { Current_user } from "../../datas.json"
 
 function TweetEditor() {
     return(
         <div className="tweet-editor">
-            <Avatar avatar={imageProfil} myClassName="avatar"/>
+            <Avatar urlAvatr={imageProfil} myClassName="avatar"/>
             <TweetEditorForm />
         </div>
     )

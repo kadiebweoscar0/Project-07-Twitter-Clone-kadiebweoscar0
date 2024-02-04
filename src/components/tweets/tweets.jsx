@@ -1,15 +1,55 @@
 import Tweet from "./tweet";
-import { datas } from "../../datas";
+import {tweets} from "../../datas";
+import { useContext } from "react";
+// import Contexte from "../../asset/context";
+import ContexteTweet from "../../asset/contexteTweet";
 
-function getAllTweets() {
-    //recuperation des données des
-    return Object.values(datas).flatMap((user) => user.tweets.map((tweet) => <Tweet data={tweet} key={tweet.id} user={user.credential_user} />));
-  }
+
+import { createContext } from "react";
+
+export const ContexteA = createContext(null);
+
+
+// console.log(tweets);
+
+
+
+// export const datasApp = {...datas};
+
+// function getAllTweets() {
+
+//     const t = []
+
+//     // const userContexte = useContext(Contexte);
+//     // // console.log(userContexte);
+//     // // Object.values(userContexte).flatMap((item) => t.push(item))
+//     // // console.log(t);
+
+//     //recuperation des données des
+//     return Object.values(datasApp).flatMap((user) => user.tweets.map((tweet) => 
+//     console.log("map",tweet.id_tweet)
+//     (
+
+//         <Tweet data={tweet} key={tweet.id} user={user.credential_user} />
+//         )
+    
+   
+//     )
+//     );
+// }
 
 function Tweets() {
+   
     return(
         <div className="tweets">
-            {getAllTweets()}
+            {tweets.map((tweet, index) =>
+            // console.log("hh", tweet.titleAuthor)
+            (<ContexteTweet.Provider value={tweet}>
+                <Tweet />
+                {/* {console.log(tweet.titleAuthor)} */}
+                </ContexteTweet.Provider>)
+            
+            )}
         </div>
     )
 }

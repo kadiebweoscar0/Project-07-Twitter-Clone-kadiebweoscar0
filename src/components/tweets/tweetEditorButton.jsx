@@ -7,7 +7,11 @@ import TweeEditorAction from "./tweeEditorAction";
 import iconEmoji from "../../../public/images/iconEmoji.svg"
 import Button from "../button";
 
-function TweetEditorButton() {
+ const handlClick = () =>{
+    
+ }
+
+function TweetEditorButton(props) {
     return(
         <div className="tweet-editor-buttons">
             <div className="tweet-editor-actions">
@@ -18,7 +22,7 @@ function TweetEditorButton() {
                 <TweeEditorAction imageAction={iconSchedoule} />
 
             </div>
-            <Button textButton="Tweet" className="button" />
+            <Button onClick={props.onClick} onSubmit={props.onSubmit} textButton="Tweet" className="button" />
         </div>
     )
 }

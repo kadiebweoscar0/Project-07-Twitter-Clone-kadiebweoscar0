@@ -152,7 +152,7 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         <span className="hover-cecle" style={v ? bgColorRetweet : {} }>
           {retweetIcon}
         </span>
-        <span>
+        <span className="ml-[-20px]">
           <ValueAction value={value} style={v ? valueColor : {} } />
           {/* {actionCount.retweet}  */}
         </span>

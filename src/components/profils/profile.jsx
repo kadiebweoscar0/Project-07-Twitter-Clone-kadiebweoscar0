@@ -4,7 +4,7 @@ import iconBacak from "/images/iconBack.svg"
 import imageCover from "/images/tweet-image.png"
 import Button from "../button";
 import { NavLink, useParams } from "react-router-dom";
-import { datas } from "../../datas";
+import { tweets } from "../../datas";
 import TweetContent from "../tweets/tweetContent";
 import Avatar from "../avatar";
 import Tweets from "../tweets/tweets";
@@ -26,7 +26,7 @@ export default function Profile() {
     const useParam = useParams()
     const {name} = useParam
 
-  const user = Object.values(datas).find((user) => user.credential_user.titleAuthor === name);
+  const user = Object.values(tweets).find((user) => user.credential_user.titleAuthor === name);
     
  
     if (!user) {
