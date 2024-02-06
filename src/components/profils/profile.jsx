@@ -8,6 +8,10 @@ import { tweets } from "../../datas.json"
 import TweetContent from "../tweets/tweetContent";
 import Avatar from "../avatar";
 import Tweets from "../tweets/tweets";
+import TweetImage from "../tweets/tweetImage";
+import TweetText from "../tweets/tweetText";
+import TweetTitleAuthor from "../tweets/tweetTitleAuthor";
+import TweetTitleDetail from "../tweets/tweetTitleDetail";
 
 export function UserName(props) {
     return(
@@ -99,7 +103,6 @@ export default function Profile() {
                 <li>Media</li>
                 <li>Likes</li>
             </ul>
-            {console.log(userFind.tweetTextValue)}
             {userFind.tweetTextValue &&
                 <div className="tweet" key={userFind.id}>
                     <NavLink to={`/${userFind.titleAuthor}`} >
@@ -107,14 +110,23 @@ export default function Profile() {
                     </NavLink>
 
                     {/* Affichage des tweets */}
-                        <TweetContent
-                            key={userFind.id}
-                            tweetTextValue={userFind.tweetTextValue}
-                            tweetActionValue1={userFind.tweetActionValue1}
-                            tweetActionValue2={userFind.tweetActionValue2}
-                            tweetActionValue3={userFind.tweetActionValue3}
-                            tweetActionValue4={userFind.tweetActionValue4}
-                            />
+
+                            <div className="tweet-content">
+                                <div className="tweet-body">
+                                    <div className="tweet-title">
+                                        <NavLink to={`/${userFind.titleAuthor}`} >
+                                            <TweetTitleAuthor titleAuthor={userFind.titleAuthor} />
+                                        </NavLink>
+                                        <NavLink to={`/${userFind.titleAuthor}`} >
+                                            <TweetTitleDetail styleTitleDetail="tweet-title-details" titleAddress={userFind.titleAddress} />
+                                        </NavLink>
+                                        <TweetTitleDetail styleTitleDetail="tweet-title-details" titleAddress={userFind.dateHoursPublication} />
+                                    </div>
+                                    <TweetText tweetTextValue={userFind.tweetTextValue} />
+                                    <TweetImage urlImage={userFind.imageTweet} />
+                                </div>
+
+                            </div>
                 </div>
             }      
         </div>
