@@ -5,9 +5,9 @@ import { useContext } from "react";
 import ContexteTweet from "../../asset/contexteTweet";
 
 
-function TweetTitle() {
+function TweetTitle(props) {
     const infoAuthor = useContext(ContexteTweet)
-
+    // console.log(infoAuthor);
     return(
         <div className="tweet-title">
             <NavLink to={`/${infoAuthor.titleAuthor}`} >

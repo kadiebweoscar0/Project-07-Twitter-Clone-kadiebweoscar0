@@ -6,7 +6,7 @@ import { Current_user } from "../../datas.json"
 function TweetEditor() {
     return(
         <div className="tweet-editor">
-            <Avatar urlAvatr={imageProfil} myClassName="avatar"/>
+            <Avatar urlAvatar={imageProfil} myClassName="avatar"/>
             <TweetEditorForm />
         </div>
     )

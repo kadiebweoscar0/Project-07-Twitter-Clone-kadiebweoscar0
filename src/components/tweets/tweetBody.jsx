@@ -6,7 +6,7 @@ function TweetBody(props) {
     return(
         <div className="tweet-body">
             <TweetTitle />
-            <TweetText  />
+            <TweetText tweetTextValue={props.tweetTextValue} />
             <TweetImage />
         </div>
     )

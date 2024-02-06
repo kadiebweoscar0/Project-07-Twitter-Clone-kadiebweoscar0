@@ -4,7 +4,7 @@ import ContexteTweet from "../asset/contexteTweet";
 
 function Avatar(props) {
     return(
-        <img className={props.myClassName} src={props.urlAvatr} alt="photo-avatar"/>
+        <img className={props.myClassName} src={props.urlAvatar} alt="photo-avatar"/>
     )
 }
 export default Avatar

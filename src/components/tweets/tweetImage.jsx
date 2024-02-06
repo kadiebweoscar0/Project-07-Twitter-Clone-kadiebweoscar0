@@ -3,12 +3,12 @@ import { useContext } from "react";
 import ContexteTweet from "../../asset/contexteTweet";
 
 function TweetImage(props) {
-    const urlImageTweet = useContext(ContexteTweet)
+    // const urlImageTweet = useContext(ContexteTweet)
 
     if (props.urlImage) {
         return(
             <div className="tweet-image">
-                <ImageDefault urlImage={urlImageTweet.imageTweet} alt="image-tweet" />
+                <ImageDefault urlImage={props.imageTweet} alt="image-tweet" />
             </div>
         )
     }

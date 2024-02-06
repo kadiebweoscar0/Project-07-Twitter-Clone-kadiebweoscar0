@@ -12,9 +12,10 @@ function Tweet() {
             {dataTweet.tweetTextValue &&
                 <div className="tweet" key={dataTweet.id}>
                     <NavLink to={`/${dataTweet.titleAuthor}`} >
-                        <Avatar urlAvatr={dataTweet.tweetProfile} />
+                        <Avatar urlAvatar={dataTweet.tweetProfile} />
                     </NavLink>
                     <TweetContent
+                        tweetTextValue={dataTweet.tweetTextValue}
                         tweetActionValue1={dataTweet.tweetActionValue1}
                         tweetActionValue2={dataTweet.tweetActionValue2}
                         tweetActionValue3={dataTweet.tweetActionValue3}

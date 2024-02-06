@@ -4,12 +4,10 @@ import iconBacak from "/images/iconBack.svg"
 import imageCover from "/images/tweet-image.png"
 import Button from "../button";
 import { NavLink, useParams } from "react-router-dom";
-import { tweets } from "../../datas";
+import { tweets } from "../../datas.json"
 import TweetContent from "../tweets/tweetContent";
 import Avatar from "../avatar";
 import Tweets from "../tweets/tweets";
-
-
 
 export function UserName(props) {
     return(
@@ -26,10 +24,10 @@ export default function Profile() {
     const useParam = useParams()
     const {name} = useParam
 
-  const user = Object.values(tweets).find((user) => user.credential_user.titleAuthor === name);
+  const userFind = Object.values(tweets).find((tweet) => tweet.titleAuthor === name);
     
  
-    if (!user) {
+    if (!userFind) {
        return(  
         <div className="profile">
             <div className="entete">
@@ -46,7 +44,7 @@ export default function Profile() {
             </span>
             <span className="profil-author-and-button-editor">
                 <span className="profil-author">
-                    <Avatar myClassName="avatar-style-profile" avatar={imageProfil} />
+                    <Avatar myClassName="avatar-style-profile" urlAvatar={imageProfil} />
                 </span>
                 <Button className="button" textButton='edit profil' />
             </span>
@@ -77,22 +75,22 @@ export default function Profile() {
                     </span>
                 </NavLink>
                
-                <UserName username={user.credential_user.titleAuthor} numberPost={user.credential_user.posts} />
+                <UserName username={userFind.titleAuthor} numberPost={userFind.posts} />
             </div>
             <span className="image-cover">
-                <ImageDefault urlImage={user.credential_user.cover} />
+                <ImageDefault urlImage={userFind.cover} />
             </span>
             <span className="profil-author-and-button-editor">
                 <span className="profil-author">
-                    <Avatar myClassName="avatar-style-profile" avatar={user.credential_user.tweetProfile} />
+                    <Avatar myClassName="avatar-style-profile" urlAvatar={userFind.tweetProfile} />
                 </span>
                 <Button className="button" textButton='edit profil' />
             </span>
            
             <div className="detail-author">
-                <UserName username={user.credential_user.titleAuthor} userAdress={user.credential_user.titleAddress} />
-                <p>{user.credential_user.dateJoined}</p>
-                <p>{user.credential_user.following} following   {user.credential_user.followers} followers</p>
+                <UserName username={userFind.titleAuthor} userAdress={userFind.titleAddress} />
+                <p>{userFind.dateJoined}</p>
+                <p>{userFind.following} following   {userFind.followers} followers</p>
             </div>
             <ul className="user-info">
                 <li>Post</li>
@@ -101,29 +99,24 @@ export default function Profile() {
                 <li>Media</li>
                 <li>Likes</li>
             </ul>
-            {user.tweets && user.tweets.map((tweet, index) => (
-                <div className="tweet" key={user.credential_user.id}>
-                    <NavLink to={`/${user.credential_user.titleAuthor}`} >
-                        <Avatar avatar={user.credential_user.tweetProfile} myClassName="tweet-avatar" />
+            {console.log(userFind.tweetTextValue)}
+            {userFind.tweetTextValue &&
+                <div className="tweet" key={userFind.id}>
+                    <NavLink to={`/${userFind.titleAuthor}`} >
+                        <Avatar urlAvatar={userFind.tweetProfile} myClassName="tweet-avatar" />
                     </NavLink>
+
                     {/* Affichage des tweets */}
                         <TweetContent
-                            key={index}
-                            tweetTextValue={tweet.tweetTextValue}
-                            tweetActionValue1={tweet.tweetActionValue1}
-                            tweetActionValue2={tweet.tweetActionValue2}
-                            tweetActionValue3={tweet.tweetActionValue3}
-                            tweetActionValue4={tweet.tweetActionValue4}
-                            id={user.credential_user.id}
-                            titleAuthor={user.credential_user.titleAuthor}
-                            titleAddress={user.credential_user.titleAddress}
-                            dateHoursPublication={user.credential_user.dateHoursPublication}
-                            urlImage={tweet.imageTweet}
+                            key={userFind.id}
+                            tweetTextValue={userFind.tweetTextValue}
+                            tweetActionValue1={userFind.tweetActionValue1}
+                            tweetActionValue2={userFind.tweetActionValue2}
+                            tweetActionValue3={userFind.tweetActionValue3}
+                            tweetActionValue4={userFind.tweetActionValue4}
                             />
                 </div>
-            ))}      
+            }      
         </div>
-            
-        
     );
 }

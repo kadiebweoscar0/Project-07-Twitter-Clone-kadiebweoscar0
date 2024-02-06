@@ -8,7 +8,7 @@ export function AccountFollow(props) {
     return(
         <div className="accountFollow">
             <span className="avatar-and-text">
-                <Avatar  avatar={props.avatar} />
+                <Avatar  urlAvatar={props.avatar} />
                 <span>
                     <TweetTitleAuthor 
                     myStyleTitleAuthor={props.myStyleTitleAuthor} 
