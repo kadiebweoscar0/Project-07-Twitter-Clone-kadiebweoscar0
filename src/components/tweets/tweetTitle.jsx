@@ -6,7 +6,6 @@ import ContexteTweet from "../../asset/contexteTweet";
 
 function TweetTitle() {
     const infoAuthor = useContext(ContexteTweet)
-    console.log(infoAuthor.titleAuthor);
     return(
         <div className="tweet-title">
             <NavLink to={`/${infoAuthor.titleAuthor}`} >

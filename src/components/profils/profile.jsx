@@ -5,7 +5,6 @@ import imageCover from "/images/tweet-image.png"
 import Button from "../button";
 import { NavLink, useParams } from "react-router-dom";
 import { tweets } from "../../datas.json"
-import TweetContent from "../tweets/tweetContent";
 import Avatar from "../avatar";
 import Tweets from "../tweets/tweets";
 import TweetImage from "../tweets/tweetImage";

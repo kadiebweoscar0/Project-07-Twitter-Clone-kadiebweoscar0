@@ -6,12 +6,12 @@ import ContextApp from "../../asset/contextApp";
 
 
 function Tweets() {
-    const {tweets} = useContext(ContextApp)
-    console.log(tweets);
+    const {tweets, allDataTweets} = useContext(ContextApp)
+    console.log(allDataTweets);
    
     return(
         <div className="tweets">
-            {tweets.map((tweet, index) =>
+            {allDataTweets.map((tweet, index) =>
             (<ContexteTweet.Provider value={tweet}>
                 <Tweet />
                 </ContexteTweet.Provider>)

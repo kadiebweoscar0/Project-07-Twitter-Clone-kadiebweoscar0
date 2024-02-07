@@ -1,24 +1,17 @@
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import TweetEditorButton from "./tweetEditorButton";
 import TweetEditorInput from "./tweetEditorInput";
+import ContextApp from "../../asset/contextApp";
 
 
 let valueTextArea = document.getElementById("kk")
 
-
-
-
-
-
-
-
 function TweetEditorForm(){
+    const {tweets, allDataTweets, setAllDataTweets} = useContext(ContextApp)
 
     const handlSubmitButton = (e) =>{
         e.preventDefault();
-        // let vc = handlChange
-        // console.log(vc)
     }
 
     const [valueInput, setValueInout] = useState("");
@@ -26,13 +19,31 @@ function TweetEditorForm(){
     const handlChange = (e) =>{
         const valueI = e.target.value
         setValueInout(valueI)
-        
-        console.log(valueInput);
     }
+    const handlClick = (e) =>{
+        e.preventDefault()
+        const copiTweets = tweets.slice()
 
-    const handlClick = () =>{
-        
-        console.log(handlChange);
+        tweets.unshift({"id": tweets.length + 1,
+        "tweetProfile": "public/images/profile-photo.png",
+        "titleAuthor": "Bradley Ortiz",
+        "titleAddress":"@Bradley Ortiz",
+        "dateHoursPublication":". 7min",
+        "dateJoined" : "joined December 2023",
+        "following" : 6,
+        "followers": 0,
+        "posts": 0,
+        "cover": "public/images/CoverCUrrentUser.jpeg",
+        "id_tweet" : 1,
+        "tweetTextValue": valueInput,
+        "tweetActionValue1": 0,
+        "tweetActionValue2": 0,
+        "tweetActionValue3": 0,
+        "tweetActionValue4":"",
+        "imageTweet":""})
+
+        setAllDataTweets(copiTweets)
+
     }
 
     return(
