@@ -40,7 +40,8 @@ function TweetEditorForm(){
         "tweetActionValue2": 0,
         "tweetActionValue3": 0,
         "tweetActionValue4":"",
-        "imageTweet":""})
+        "imageTweet":"",
+    })
 
         setAllDataTweets(copiTweets)
 

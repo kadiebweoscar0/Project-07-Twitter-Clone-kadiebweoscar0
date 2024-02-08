@@ -11,6 +11,7 @@ import('./style/App.css');
 
 export default function App() {
   const [allDataTweets, setAllDataTweets] = useState(tweets)
+
   return (
     <ContextApp.Provider value={{tweets, allDataTweets, setAllDataTweets}}>
       <Layout>

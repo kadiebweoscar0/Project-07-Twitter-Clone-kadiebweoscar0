@@ -11,6 +11,7 @@ import TweetImage from "../tweets/tweetImage";
 import TweetText from "../tweets/tweetText";
 import TweetTitleAuthor from "../tweets/tweetTitleAuthor";
 import TweetTitleDetail from "../tweets/tweetTitleDetail";
+import TweetAction from "../tweets/tweetAction";
 
 export function UserName(props) {
     return(
@@ -124,6 +125,7 @@ export default function Profile() {
                                     <TweetText tweetTextValue={userFind.tweetTextValue} />
                                     <TweetImage urlImage={userFind.imageTweet} />
                                 </div>
+                                <TweetAction value1={userFind.tweetActionValue1} value2={userFind.tweetActionValue2} value3={userFind.tweetActionValue3} value4={userFind.tweetActionValue4} />
 
                             </div>
                 </div>

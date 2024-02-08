@@ -1,6 +1,7 @@
 import TweeEditorAction from "./tweeEditorAction";
 import ValueAction from "../valueAction";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ContextApp from "../../asset/contextApp";
 
 const likeIconWithBg = <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.45169 19.0952C13.3301 17.2185 16.1369 14.0148 17.6509 10.7709C19.1417 7.54043 19.3513 4.32333 18.0237 2.39307C16.8241 0.663868 15.2634 0.00704628 13.6794 0.0606634C12.0955 0.114286 10.5581 0.905158 9.45169 2.01773C8.34525 0.905158 6.8079 0.114286 5.22395 0.0606634C3.64 0.00704628 2.07935 0.663868 0.879742 2.39307C-0.447979 4.32333 -0.238339 7.54043 1.27573 10.7709C2.7665 14.0148 5.57335 17.2185 9.45169 19.0952Z" fill="#FF0000"/>
@@ -24,6 +25,7 @@ function TweetAction(props) {
         setActionCount({
           ...actionCount,
           [e]: actionCount[e] + 1
+
         })
       }
     }
@@ -35,7 +37,7 @@ function TweetAction(props) {
         })
       }
     }
-    setIsAction(!isAction)   
+    setIsAction(!isAction)  
   };
 
   return (
@@ -162,6 +164,7 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
 }
 
 export  function Like({value, onClick}) {
+  // const {isLike, setIsLike, allDataTweets, setAllDataTweets} = useContext(ContextApp)
   const [isLike, setIsLike] = useState(false)
   const [isHover, setIsHover] = useState("#D9D9D9")
   const [v, setV] = useState(false)
@@ -174,8 +177,10 @@ export  function Like({value, onClick}) {
     color: "#f21b3f"
   }
 
-  const handleMouseUp = () =>{
-    setIsLike(!isLike)
+  const handleMouseUp = (e) =>{
+    // console.log(e.target);
+
+    setIsLike(!isLike);
   }
 
   const handleMouseHover = () =>{
