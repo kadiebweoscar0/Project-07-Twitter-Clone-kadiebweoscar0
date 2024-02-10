@@ -6,7 +6,7 @@ import ContextApp from "../../asset/contextApp";
 
 
 function Tweets() {
-    const {tweets, allDataTweets} = useContext(ContextApp)
+    const { allDataTweets} = useContext(ContextApp)
    
     return(
         <div className="tweets">
