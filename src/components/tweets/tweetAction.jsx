@@ -72,7 +72,7 @@ export default TweetAction;
 
 export  function Comment({value, onClick}) {
   const [isHover, setIsHover] = useState("#D9D9D9")
-  const [v, setV] = useState(false)
+  const [style, setStyle] = useState(false)
 
   const bgColorComment = {
     backgroundColor: "#00bbf949"
@@ -85,13 +85,13 @@ export  function Comment({value, onClick}) {
 
   const handleMouseHover = () =>{
         setIsHover("#00bbf9")
-        setV(true)
+        setStyle(true)
 
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
-    setV(false)
+    setStyle(false)
   }
 
 
@@ -106,11 +106,11 @@ export  function Comment({value, onClick}) {
         onMouseOut={handleMouseOut}
         title="Reply"
       >
-      <span className="hover-cecle" style={v ? bgColorComment : {}} >
+      <span className="hover-cecle" style={style ? bgColorComment : {}} >
         {commentIcon}
       </span>
 
-      <ValueAction value={value} style={v ? valueColor : {}} />
+      <ValueAction value={value} style={style ? valueColor : {}} />
         {/* {actionCount.comment}  */}
       </span>
     </>
@@ -119,7 +119,7 @@ export  function Comment({value, onClick}) {
 
 export  function Retweet({value, onClick}) {
  const [isHover, setIsHover] = useState("#D9D9D9")
- const [v, setV] = useState(false)
+ const [style, setStyle] = useState(false)
 
  const bgColorRetweet = {
   backgroundColor: "#80ed9950"
@@ -131,12 +131,12 @@ const valueColor = {
 
   const handleMouseHover = () =>{
         setIsHover("#80ed99")
-        setV(true)
+        setStyle(true)
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
-    setV(false)
+    setStyle(false)
   }
 
 const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,11 +151,11 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         title="Repost"
       >
         
-        <span className="hover-cecle" style={v ? bgColorRetweet : {} }>
+        <span className="hover-cecle" style={style ? bgColorRetweet : {} }>
           {retweetIcon}
         </span>
         <span className="ml-[-20px]">
-          <ValueAction value={value} style={v ? valueColor : {} } />
+          <ValueAction value={value} style={style ? valueColor : {} } />
           {/* {actionCount.retweet}  */}
         </span>
       </span>
@@ -167,7 +167,7 @@ export  function Like({value, onClick}) {
   // const {isLike, setIsLike, allDataTweets, setAllDataTweets} = useContext(ContextApp)
   const [isLike, setIsLike] = useState(false)
   const [isHover, setIsHover] = useState("#D9D9D9")
-  const [v, setV] = useState(false)
+  const [style, setStyle] = useState(false)
 
   let styleLike = {
     backgroundColor: "#d61f3e48",
@@ -185,12 +185,12 @@ export  function Like({value, onClick}) {
 
   const handleMouseHover = () =>{
         setIsHover("#f21b3f")
-        setV(true)
+        setStyle(true)
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
-    setV(false)
+    setStyle(false)
   }
 
 const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,10 +206,10 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
         onMouseOut={handleMouseOut}
         title="Like"
       >
-      <span className="hover-cecle" style={v ? styleLike : {}} >
+      <span className="hover-cecle" style={style ? styleLike : {}} >
         {isLike? likeIconWithBg : likeIconEmptyBg}
       </span>
-        <ValueAction classNameValueAction={isLike? "valueStyleLike" : ""}  style={v ? valueStyle : {}} value={value} />
+        <ValueAction classNameValueAction={isLike? "valueStyleLike" : ""}  style={style ? valueStyle : {}} value={value} />
         {/* {actionCount.like}  */}
       </span>
     </>
@@ -218,7 +218,7 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
 
 export  function Update({value, onClick}) {
   const [isHover, setIsHover] = useState("#D9D9D9")
-  const [v, setV] = useState(false)
+  const [style, setStyle] = useState(false)
 
   const bgColorUpdate = {
     backgroundColor: "#00bbf949"
@@ -231,13 +231,13 @@ export  function Update({value, onClick}) {
 
   const handleMouseHover = () =>{
         setIsHover("#00bbf9")
-        setV(true)
+        setStyle(true)
 
   }
 
   const handleMouseOut = () =>{
     setIsHover("#D9D9D9")
-    setV(false)
+    setStyle(false)
   }
 
 
@@ -254,10 +254,10 @@ const updateIcon =  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         onMouseOut={handleMouseOut}
         title="Share"
       >
-      <span className="hover-cecle" style={v ? bgColorUpdate : {} }>
+      <span className="hover-cecle" style={style ? bgColorUpdate : {} }>
         {updateIcon}
       </span>
-        <ValueAction value={value} style={v ? valueColor : {} } />
+        <ValueAction value={value} style={style ? valueColor : {} } />
         {/* {actionCount.update}  */}
       </span>
     </>
