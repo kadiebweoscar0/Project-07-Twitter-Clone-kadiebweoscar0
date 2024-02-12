@@ -144,6 +144,42 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "tweetTextValue": "jjj"
+    },
+    {
+      "id": 8,
+      "tweetProfile": "public/images/profile-photo.png",
+      "titleAuthor": "Bradley Ortiz",
+      "titleAddress": "@Bradley Ortiz",
+      "dateHoursPublication": ". 7min",
+      "dateJoined": "joined December 2023",
+      "following": 6,
+      "followers": 0,
+      "posts": 0,
+      "cover": "public/images/CoverCUrrentUser.jpeg",
+      "tweetActionValue1": 0,
+      "tweetActionValue2": 0,
+      "tweetActionValue3": 0,
+      "tweetActionValue4": "",
+      "imageTweet": "",
+      "tweetTextValue": "bonjour"
+    },
+    {
+      "id": 9,
+      "tweetProfile": "public/images/profile-photo.png",
+      "titleAuthor": "Bradley Ortiz",
+      "titleAddress": "@Bradley Ortiz",
+      "dateHoursPublication": ". 7min",
+      "dateJoined": "joined December 2023",
+      "following": 6,
+      "followers": 0,
+      "posts": 0,
+      "cover": "public/images/CoverCUrrentUser.jpeg",
+      "tweetActionValue1": 0,
+      "tweetActionValue2": 0,
+      "tweetActionValue3": 0,
+      "tweetActionValue4": "",
+      "imageTweet": "",
+      "tweetTextValue": "bonjour"
     }
   ]
 }
