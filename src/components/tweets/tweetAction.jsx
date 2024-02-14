@@ -2,65 +2,33 @@ import TweeEditorAction from "./tweeEditorAction";
 import ValueAction from "../valueAction";
 import { useContext, useState } from "react";
 import ContextApp from "../../asset/contextApp";
+import ContexteTweet from "../../asset/contexteTweet";
 
 const likeIconWithBg = <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.45169 19.0952C13.3301 17.2185 16.1369 14.0148 17.6509 10.7709C19.1417 7.54043 19.3513 4.32333 18.0237 2.39307C16.8241 0.663868 15.2634 0.00704628 13.6794 0.0606634C12.0955 0.114286 10.5581 0.905158 9.45169 2.01773C8.34525 0.905158 6.8079 0.114286 5.22395 0.0606634C3.64 0.00704628 2.07935 0.663868 0.879742 2.39307C-0.447979 4.32333 -0.238339 7.54043 1.27573 10.7709C2.7665 14.0148 5.57335 17.2185 9.45169 19.0952Z" fill="#FF0000"/>
 </svg>
 
+
 function TweetAction(props) {
-  const [actionCount, setActionCount] = useState({
-    comment: props.value1,
-    retweet: props.value2,
-    like: props.value3,
-    update: props.value4
-  });
-  const  [isAction, setIsAction]= useState(true)
-
-  const handleLikeClick = (e) => {
-    
-    const actionName = e
-    
-    if (isAction === true) {
-      if (["comment", "retweet", "like", "update"].includes(actionName)) {
-        setActionCount({
-          ...actionCount,
-          [e]: actionCount[e] + 1
-
-        })
-      }
-    }
-    else{
-      if (["comment", "retweet", "like", "update"].includes(actionName)) {
-        setActionCount({
-          ...actionCount,
-          [e]: actionCount[e] - 1
-        })
-      }
-    }
-    setIsAction(!isAction)  
-  };
+  const {tweetActionValue1,tweetActionValue2,tweetActionValue3,tweetActionValue4} = useContext(ContexteTweet)
 
   return (
     <div className="tweet-actions">
       
       <Comment 
-      value={actionCount.comment} 
-      onClick={()=>handleLikeClick("comment")} 
+      value={tweetActionValue1} 
       />
 
       <Retweet 
-      value={actionCount.retweet} 
-      onClick={()=>handleLikeClick("retweet")} 
+      value={tweetActionValue2} 
       />
 
       <Like 
-      value={actionCount.like} 
-      onClick={()=>handleLikeClick("like")} 
+      value={tweetActionValue3} 
        />
      
      <Update 
-      value={actionCount.update} 
-      onClick={()=>handleLikeClick("update")} 
+      value={tweetActionValue4} 
        />
 
     </div>
@@ -111,7 +79,6 @@ export  function Comment({value, onClick}) {
       </span>
 
       <ValueAction value={value} style={style ? valueColor : {}} />
-        {/* {actionCount.comment}  */}
       </span>
     </>
   )
@@ -156,16 +123,15 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         </span>
         <span className="ml-[-20px]">
           <ValueAction value={value} style={style ? valueColor : {} } />
-          {/* {actionCount.retweet}  */}
         </span>
       </span>
     </>
   )
 }
 
-export  function Like({value, onClick}) {
-  // const {isLike, setIsLike, allDataTweets, setAllDataTweets} = useContext(ContextApp)
-  const [isLike, setIsLike] = useState(false)
+export  function Like() {
+  const tweet = useContext(ContexteTweet)
+  const {isLike, setIsLike} = useContext(ContextApp)
   const [isHover, setIsHover] = useState("#D9D9D9")
   const [style, setStyle] = useState(false)
 
@@ -177,10 +143,17 @@ export  function Like({value, onClick}) {
     color: "#f21b3f"
   }
 
-  const handleMouseUp = (e) =>{
-    // console.log(e.target);
+  const handleMouseUp = () =>{
 
     setIsLike(!isLike);
+    tweet.likePersisted =!tweet.likePersisted
+    if (tweet.likePersisted ) {
+      tweet.tweetActionValue3++
+    }
+    else{
+      tweet.tweetActionValue3--
+    }
+
   }
 
   const handleMouseHover = () =>{
@@ -200,17 +173,16 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
   return (
     <>
       <span className="tweet-editor-actions hover-of-action" 
-        onClick={onClick}
-        onMouseUp={handleMouseUp}
+        onClick={handleMouseUp}
+        // onMouseUp={handleMouseUp}
         onMouseOver={handleMouseHover}
         onMouseOut={handleMouseOut}
         title="Like"
       >
       <span className="hover-cecle" style={style ? styleLike : {}} >
-        {isLike? likeIconWithBg : likeIconEmptyBg}
+        {tweet.likePersisted ? likeIconWithBg : likeIconEmptyBg}
       </span>
-        <ValueAction classNameValueAction={isLike? "valueStyleLike" : ""}  style={style ? valueStyle : {}} value={value} />
-        {/* {actionCount.like}  */}
+        <ValueAction classNameValueAction={tweet.likePersisted ? "valueStyleLike" : ""}  style={style ? valueStyle : {}} value={tweet.tweetActionValue3} />
       </span>
     </>
   )
@@ -258,7 +230,6 @@ const updateIcon =  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         {updateIcon}
       </span>
         <ValueAction value={value} style={style ? valueColor : {} } />
-        {/* {actionCount.update}  */}
       </span>
     </>
   )

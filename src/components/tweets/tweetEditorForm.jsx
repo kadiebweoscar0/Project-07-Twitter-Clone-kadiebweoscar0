@@ -7,16 +7,16 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 
-let valueTextArea = document.getElementById("kk")
 function TweetEditorForm() {
   const { tweets, allDataTweets, setAllDataTweets } = useContext(ContextApp);
   const { register, handleSubmit, reset } = useForm();
+  
   const defaultValues = {
     id: allDataTweets.length + 1,
     tweetProfile: "public/images/profile-photo.png",
     titleAuthor: "Bradley Ortiz",
     titleAddress: "@Bradley Ortiz",
-    dateHoursPublication: ". 7min",
+    dateHoursPublication:`. ${Date.now()}`,
     dateJoined: "joined December 2023",
     following: 6,
     followers: 0,
@@ -26,7 +26,8 @@ function TweetEditorForm() {
     tweetActionValue2: 0,
     tweetActionValue3: 0,
     tweetActionValue4: "",
-    imageTweet: ""
+    imageTweet: "",
+    likePersisted: false
   };
 
   const onSubmitForm = (data) => {
@@ -37,12 +38,12 @@ function TweetEditorForm() {
       
       )
       .catch((error) => console.log(error));
-      reset()
+      reset
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmitForm)} className="tweet-editor-form">
-      <input
+      <textarea style={{overflow: "hidden"}}
         id="kk"
         className="tweet-editor-input"
         type="text"
@@ -50,7 +51,9 @@ function TweetEditorForm() {
         name="tweetTextValue"
         {...register("tweetTextValue", { required: true })}
       />
+      <span>
       <TweetEditorButton />
+      </span>
     </form>
   );
 }
