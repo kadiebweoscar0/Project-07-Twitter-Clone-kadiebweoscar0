@@ -20,7 +20,7 @@ function SideBar() {
                     <Avatar myClassName="profilePhoto-setting" urlAvatar={imageProfil} />
                 </NavLink>
                     <span className="title-profileSetting">
-                        <h3><NavLink to="/Bradley-Ortiz"> Bradley Ortiz </NavLink> <img src={iconePrivate} alt="icone" /> </h3>
+                        <h3><NavLink to="/Bradley Ortiz"> Bradley Ortiz </NavLink> <img src={iconePrivate} alt="icone" /> </h3>
                         <p>@bradley...</p>
                     </span>
 

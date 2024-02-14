@@ -12,13 +12,18 @@ import('./style/App.css');
 
 export default function App() {
   const [allDataTweets, setAllDataTweets] = useState([])
+  const  [isAction, setIsAction]= useState(true)
+  const [actionCount, setActionCount] = useState(false);
+  const [isLike, setIsLike] = useState(false)
+
+
 
 
   useEffect(() => {
     const fetchTweets = async () => {
       try {
         const response = await axios.get('http://localhost:8000/tweets');
-        console.log(response.data);
+        // console.log(response.data);
         setAllDataTweets(response.data);
         // console.log(response.data);
       } catch (error) {
@@ -39,7 +44,7 @@ export default function App() {
 
 
   return (
-    <ContextApp.Provider value={{tweets, allDataTweets, setAllDataTweets}}>
+    <ContextApp.Provider value={{tweets, allDataTweets, setAllDataTweets, isAction, setIsAction, actionCount, setActionCount,isLike, setIsLike}}>
       <Layout>
         <BrowserRouter>
           <Routes>

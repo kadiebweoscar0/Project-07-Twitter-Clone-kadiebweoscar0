@@ -22,7 +22,7 @@ function TweetEditorButton(props) {
                 <TweeEditorAction imageAction={iconSchedoule} />
 
             </div>
-            <Button onClick={props.onClick} onSubmit={props.onSubmit} textButton="Tweet" className="button" />
+            <Button disabled={props.disabled} onClick={props.onClick} onSubmit={props.onSubmit} textButton="Tweet" className="button" />
         </div>
     )
 }
