@@ -22,7 +22,7 @@ export default function App() {
   useEffect(() => {
     const fetchTweets = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/tweets');
+        const response = await axios.get('http://localhost:5000/tweets');
         // console.log(response.data);
         setAllDataTweets(response.data);
         // console.log(response.data);
