@@ -10,7 +10,7 @@ function Tweets() {
    
     return(
         <div className="tweets">
-            {allDataTweets.map((tweet, index) =>
+            {allDataTweets.map((tweet) =>
             (<ContexteTweet.Provider value={tweet}>
                 <Tweet />
                 </ContexteTweet.Provider>)
