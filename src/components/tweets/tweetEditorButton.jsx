@@ -20,7 +20,7 @@ function TweetEditorButton(props) {
 
             </div>
             {/* <span disabled={props.disabled} style={props.disabled ? {backgroundColor: "gray"}: {}}> */}
-                <Button enabled={!props.enabled} style={props.enabled ? {opacity: "0.5"}: {}}  onClick={props.onClick} onSubmit={props.onSubmit} textButton="Tweet" className="button" />  
+                <Button disabled={props.disabled} style={props.disabled ? {opacity: "0.5"}: {}}  onClick={props.onClick} onSubmit={props.onSubmit} textButton="Tweet" className="button" />  
             {/* </span> */}
         </div>
     )

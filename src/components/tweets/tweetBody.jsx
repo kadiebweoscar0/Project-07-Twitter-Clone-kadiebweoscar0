@@ -7,7 +7,7 @@ import ContexteTweet from "../../asset/contexteTweet";
 function TweetBody(props) {
     const {imageTweet} = useContext(ContexteTweet)
     return(
-        <div className="tweet-body">
+        <div className="tweet-body overflow-hidden">
             <TweetTitle />
             <TweetText tweetTextValue={props.tweetTextValue} />
             <TweetImage urlImage={imageTweet} />
