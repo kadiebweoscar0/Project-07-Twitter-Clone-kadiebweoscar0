@@ -10,9 +10,9 @@ function Tweet() {
     return(
         <>
             {dataTweet.tweetTextValue &&
-                <div className="tweet" key={dataTweet.id}>
+                <div className="tweet overflow-hidden" key={dataTweet.id}>
                     <NavLink to={`/${dataTweet.titleAuthor}`} >
-                        <Avatar urlAvatar={dataTweet.tweetProfile} />
+                        <Avatar myClassName="w-20" urlAvatar={dataTweet.tweetProfile} />
                     </NavLink>
                     <TweetContent
                         tweetTextValue={dataTweet.tweetTextValue}

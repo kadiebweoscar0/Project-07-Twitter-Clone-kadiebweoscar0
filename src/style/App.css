@@ -395,9 +395,9 @@ a{
 }
 
 .icon-back, .hover-cecle{
-    padding: .6rem;
-    border-radius: 50%;
-    align-items: center;
+    padding: .6rem !important;
+    border-radius: 50% !important;
+    align-items: center !important;
 }
 
 .icon-back:hover{

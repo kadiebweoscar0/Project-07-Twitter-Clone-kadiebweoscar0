@@ -74,11 +74,12 @@ export  function Comment({value, onClick}) {
         onMouseOut={handleMouseOut}
         title="Reply"
       >
-      <span className="hover-cecle" style={style ? bgColorComment : {}} >
-        {commentIcon}
-      </span>
-
-      <ValueAction value={value} style={style ? valueColor : {}} />
+        <span className="hover-cecle" style={style ? bgColorComment : {}} >
+          {commentIcon}
+        </span>
+        <span className="ml-[-20px]">
+        <ValueAction value={value} style={style ? valueColor : {}} />
+        </span>
       </span>
     </>
   )
@@ -118,12 +119,12 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         title="Repost"
       >
         
-        <span className="hover-cecle" style={style ? bgColorRetweet : {} }>
-          {retweetIcon}
-        </span>
-        <span className="ml-[-20px]">
-          <ValueAction value={value} style={style ? valueColor : {} } />
-        </span>
+          <span className="hover-cecle" style={style ? bgColorRetweet : {} }>
+            {retweetIcon}
+          </span>
+          <span className="ml-[-20px]">
+            <ValueAction value={value} style={style ? valueColor : {} } />
+          </span>
       </span>
     </>
   )
@@ -179,10 +180,12 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
         onMouseOut={handleMouseOut}
         title="Like"
       >
-      <span className="hover-cecle" style={style ? styleLike : {}} >
-        {tweet.likePersisted ? likeIconWithBg : likeIconEmptyBg}
-      </span>
-        <ValueAction classNameValueAction={tweet.likePersisted ? "valueStyleLike" : ""}  style={style ? valueStyle : {}} value={tweet.tweetActionValue3} />
+        <span className="hover-cecle" style={style ? styleLike : {}} >
+          {tweet.likePersisted ? likeIconWithBg : likeIconEmptyBg}
+        </span>
+        <span className="ml-[-20px]">
+          <ValueAction classNameValueAction={tweet.likePersisted ? "valueStyleLike" : ""}  style={style ? valueStyle : {}} value={tweet.tweetActionValue3} />
+        </span>
       </span>
     </>
   )
@@ -226,10 +229,12 @@ const updateIcon =  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         onMouseOut={handleMouseOut}
         title="Share"
       >
-      <span className="hover-cecle" style={style ? bgColorUpdate : {} }>
-        {updateIcon}
-      </span>
-        <ValueAction value={value} style={style ? valueColor : {} } />
+        <span className="hover-cecle" style={style ? bgColorUpdate : {} }>
+          {updateIcon}
+        </span>
+        <span className="ml-[-20px]">
+          <ValueAction value={value} style={style ? valueColor : {} } />
+        </span>
       </span>
     </>
   )

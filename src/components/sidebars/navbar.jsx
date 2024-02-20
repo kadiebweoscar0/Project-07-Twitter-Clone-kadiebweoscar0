@@ -12,50 +12,61 @@ function NavBar() {
     return(
         <ul className='ul-navBar'>
             <li>
-                <NavLink to="/">
-                    <img src={iconeHome} alt="icone" /> Home
+                <NavLink className="flex gap-2" to="/">
+                    <img src={iconeHome} alt="icone" />
+                    <span>Home</span>
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to="/explore">
-                    <img src={iconeExplore} alt="icone" /> Explore
+                <NavLink className="flex gap-2" to="/explore">
+                    <img src={iconeExplore} alt="icone" /> 
+                    <span>Explore</span>
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to="/notifiaction">
-                    <img src={iconeNotifications} alt="icone" /> Notifications
+                <NavLink className="flex gap-2" to="/notifiaction">
+                    <img src={iconeNotifications} alt="icone" /> 
+                    <span>Notifications</span>
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to="/messages">
-                    <img src={iconeMessage} alt="icone" /> Messages
+                <NavLink className="flex gap-2" to="/messages">
+                    <img src={iconeMessage} alt="icone" />
+                    <span>Messages</span>
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to="/bookmarks">
-                    <img src={iconeBookMarks} alt="icone" /> Bookmarks
+                <NavLink className="flex gap-2" to="/bookmarks">
+                    <img src={iconeBookMarks} alt="icone" /> 
+                    <span>Bookmarks</span>
+
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to="/lists">
-                    <img src={iconeLists} alt="icone" /> Lists
+                <NavLink className="flex gap-2" to="/lists">
+                    <img src={iconeLists} alt="icone" /> 
+                    <span>Lists</span>
+
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to="/Bradley Ortiz">
-                    <img src={iconeProfile} alt="icone" /> Profile
+                <NavLink className="flex gap-2" to="/Bradley Ortiz">
+                    <img src={iconeProfile} alt="icone" /> 
+                    <span>Profile</span>
+
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to="/more">
-                    <img src={iconeMore} alt="icone" /> More
+                <NavLink className="flex gap-2" to="/more">
+                    <img src={iconeMore} alt="icone" />
+                    <span>More</span>
                 </NavLink>
             </li>
         </ul>

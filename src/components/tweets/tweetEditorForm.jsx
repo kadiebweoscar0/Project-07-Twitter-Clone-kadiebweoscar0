@@ -12,7 +12,6 @@ function TweetEditorForm() {
   const { register, handleSubmit, reset, formState: {errors} } = useForm();
   
 
-
   const onSubmitForm = (data) => {
     const defaultValues = {
       id: allDataTweets.length + 1,

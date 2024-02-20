@@ -7,10 +7,12 @@ import ContextApp from "../../asset/contextApp";
 
 function Tweets() {
     const { allDataTweets} = useContext(ContextApp)
+    const reversedTweets = allDataTweets.slice().reverse();
+
    
     return(
-        <div className="tweets">
-            {allDataTweets.map((tweet) =>
+        <div className="tweets overflow-hidden">
+            {reversedTweets.map((tweet) =>
             (<ContexteTweet.Provider value={tweet}>
                 <Tweet />
                 </ContexteTweet.Provider>)

@@ -80,7 +80,7 @@ export default function Profile() {
         <div className="profile">
             <div className="entete">
                 <NavLink to="/">
-                    <span className="icon-back" title="back">
+                    <span className="icon-back rounded-full p-2" title="back">
                         <ImageDefault urlImage={iconBacak}  />
                     </span>
                 </NavLink>

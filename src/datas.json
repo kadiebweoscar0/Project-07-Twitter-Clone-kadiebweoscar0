@@ -17,7 +17,7 @@
     "tweetActionValue3": 0,
     "tweetActionValue4": "",
     "imageTweet": "",
-    "likepersisted": false
+    "likePersisted": false
   },
   "tweets": [
     {
@@ -37,7 +37,7 @@
       "tweetActionValue3": 184,
       "tweetActionValue4": "",
       "imageTweet": "",
-      "likepersisted": false
+      "likePersisted": false
     },
     {
       "id": "3",
@@ -56,7 +56,7 @@
       "tweetActionValue3": 482,
       "tweetActionValue4": 19,
       "imageTweet": "public/images/tweet-image.png",
-      "likepersisted": false
+      "likePersisted": false
     },
     {
       "id": "4",
@@ -75,7 +75,7 @@
       "tweetActionValue3": 267.1,
       "tweetActionValue4": "",
       "imageTweet": "",
-      "likepersisted": false
+      "likePersisted": false
     },
     {
       "id": "5",
@@ -94,7 +94,7 @@
       "tweetActionValue3": 267.1,
       "tweetActionValue4": "",
       "imageTweet": "",
-      "likepersisted": false
+      "likePersisted": false
     },
     {
       "id": "6",
@@ -113,7 +113,7 @@
       "tweetActionValue3": 267.1,
       "tweetActionValue4": "",
       "imageTweet": "public/images/tweet-image.png",
-      "likepersisted": false
+      "likePersisted": false
     },
     {
       "id": "6",
@@ -132,14 +132,14 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "likePersisted": false,
-      "tweetTextValue": "bonjour le monde"
+      "tweetTextValue": "hermacle"
     },
     {
       "id": "7",
       "tweetProfile": "public/images/profile-photo.png",
       "titleAuthor": "Bradley Ortiz",
       "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
+      "dateHoursPublication": ". 1707899815877",
       "dateJoined": "joined December 2023",
       "following": 6,
       "followers": 0,
@@ -151,10 +151,10 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "likePersisted": false,
-      "tweetTextValue": "kez"
+      "tweetTextValue": "Bonjour le monde"
     },
     {
-      "id": 8,
+      "id": "8",
       "tweetProfile": "public/images/profile-photo.png",
       "titleAuthor": "Bradley Ortiz",
       "titleAddress": "@Bradley Ortiz",
@@ -170,10 +170,10 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "likePersisted": false,
-      "tweetTextValue": "tweet"
+      "tweetTextValue": "clear"
     },
     {
-      "id": 9,
+      "id": "9",
       "tweetProfile": "public/images/profile-photo.png",
       "titleAuthor": "Bradley Ortiz",
       "titleAddress": "@Bradley Ortiz",
@@ -189,10 +189,10 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "likePersisted": false,
-      "tweetTextValue": "@kadeaAcademy"
+      "tweetTextValue": "clear1"
     },
     {
-      "id": 10,
+      "id": "10",
       "tweetProfile": "public/images/profile-photo.png",
       "titleAuthor": "Bradley Ortiz",
       "titleAddress": "@Bradley Ortiz",
@@ -208,10 +208,10 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "likePersisted": false,
-      "tweetTextValue": "kadea"
+      "tweetTextValue": "what's"
     },
     {
-      "id": 11,
+      "id": "11",
       "tweetProfile": "public/images/profile-photo.png",
       "titleAuthor": "Bradley Ortiz",
       "titleAddress": "@Bradley Ortiz",
@@ -227,10 +227,10 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "likePersisted": false,
-      "tweetTextValue": "kd"
+      "tweetTextValue": "what's2"
     },
     {
-      "id": 12,
+      "id": "12",
       "tweetProfile": "public/images/profile-photo.png",
       "titleAuthor": "Bradley Ortiz",
       "titleAddress": "@Bradley Ortiz",
@@ -246,256 +246,7 @@
       "tweetActionValue4": "",
       "imageTweet": "",
       "likePersisted": false,
-      "tweetTextValue": "kda"
-    },
-    {
-      "id": 13,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "kkk"
-    },
-    {
-      "id": 14,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "kkk"
-    },
-    {
-      "id": 16,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "fif\n"
-    },
-    {
-      "0": "k",
-      "1": "k",
-      "2": "k",
-      "id": 17,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false
-    },
-    {
-      "id": 18,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "simeon"
-    },
-    {
-      "id": 19,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "simeon1"
-    },
-    {
-      "id": 19,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "simeon3"
-    },
-    {
-      "id": 20,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "kaka"
-    },
-    {
-      "id": 21,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "kaka1"
-    },
-    {
-      "id": 22,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "salut"
-    },
-    {
-      "id": 23,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "bonjour"
-    },
-    {
-      "id": 24,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "boujour"
-    },
-    {
-      "id": 25,
-      "tweetProfile": "public/images/profile-photo.png",
-      "titleAuthor": "Bradley Ortiz",
-      "titleAddress": "@Bradley Ortiz",
-      "dateHoursPublication": ". 7min",
-      "dateJoined": "joined December 2023",
-      "following": 6,
-      "followers": 0,
-      "posts": 0,
-      "cover": "public/images/CoverCUrrentUser.jpeg",
-      "tweetActionValue1": 0,
-      "tweetActionValue2": 0,
-      "tweetActionValue3": 0,
-      "tweetActionValue4": "",
-      "imageTweet": "",
-      "likePersisted": false,
-      "tweetTextValue": "bonjour papa"
+      "tweetTextValue": "coucou"
     }
   ]
 }
