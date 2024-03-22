@@ -5,16 +5,16 @@ import { useContext } from "react";
 import ContexteTweet from "../../asset/contexteTweet";
 
 function TweetTitle() {
-    const infoAuthor = useContext(ContexteTweet)
+    const {user} = useContext(ContexteTweet)
     return(
         <div className="tweet-title">
-            <NavLink to={`/${infoAuthor.titleAuthor}`} >
-                <TweetTitleAuthor titleAuthor={infoAuthor.titleAuthor} />
+            <NavLink to={`/${user.handle}`} >
+                <TweetTitleAuthor titleAuthor={user.name} />
             </NavLink>
-            <NavLink to={`/${infoAuthor.titleAuthor}`} >
-                <TweetTitleDetail styleTitleDetail="tweet-title-details" titleAddress={infoAuthor.titleAddress} />
+            <NavLink to={`/${user.handle}}`} >
+                <TweetTitleDetail styleTitleDetail="tweet-title-details" titleAddress={user.createdAt.substring(0, 33)} />
             </NavLink>
-            <TweetTitleDetail styleTitleDetail="tweet-title-details" dateHoursPublication={infoAuthor.dateHoursPublication} />
+            {/* <TweetTitleDetail styleTitleDetail="tweet-title-details" dateHoursPublication={infoAuthor.createdAt} /> */}
         </div>
     )
 }

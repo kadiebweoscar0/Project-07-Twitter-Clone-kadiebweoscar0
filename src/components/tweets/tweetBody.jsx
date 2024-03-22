@@ -5,12 +5,12 @@ import TweetTitle from "./tweetTitle";
 import ContexteTweet from "../../asset/contexteTweet";
 
 function TweetBody(props) {
-    const {imageTweet} = useContext(ContexteTweet)
+    const {tweet} = useContext(ContexteTweet)
     return(
         <div className="tweet-body overflow-hidden">
             <TweetTitle />
             <TweetText tweetTextValue={props.tweetTextValue} />
-            <TweetImage urlImage={imageTweet} />
+            {tweet.media && <TweetImage urlImage={tweet.media} />}
         </div>
     )
 }

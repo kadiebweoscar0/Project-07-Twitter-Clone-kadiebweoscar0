@@ -9,26 +9,24 @@ const likeIconWithBg = <svg width="19" height="19" viewBox="0 0 19 19" fill="non
 </svg>
 
 
-function TweetAction(props) {
-  const {tweetActionValue1,tweetActionValue2,tweetActionValue3,tweetActionValue4} = useContext(ContexteTweet)
-
+function TweetAction() {
+  const {user,tweet} = useContext(ContexteTweet)
   return (
     <div className="tweet-actions">
       
       <Comment 
-      value={tweetActionValue1} 
+      value={tweet.repliesCount} 
       />
 
       <Retweet 
-      value={tweetActionValue2} 
+      value={tweet.retweetCount} 
       />
 
       <Like 
-      value={tweetActionValue3} 
        />
      
      <Update 
-      value={tweetActionValue4} 
+      value={user.sharedTweetIds.length} 
        />
 
     </div>
@@ -131,7 +129,7 @@ const retweetIcon = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
 }
 
 export  function Like() {
-  const tweet = useContext(ContexteTweet)
+  const {tweet} = useContext(ContexteTweet)
   const {isLike, setIsLike} = useContext(ContextApp)
   const [isHover, setIsHover] = useState("#D9D9D9")
   const [style, setStyle] = useState(false)
@@ -149,10 +147,10 @@ export  function Like() {
     setIsLike(!isLike);
     tweet.likePersisted =!tweet.likePersisted
     if (tweet.likePersisted ) {
-      tweet.tweetActionValue3++
+      tweet.favoriteCount++
     }
     else{
-      tweet.tweetActionValue3--
+      tweet.favoriteCount--
     }
 
   }
@@ -184,7 +182,7 @@ const likeIconEmptyBg = <svg width="24" height="24" viewBox="0 0 24 24" fill="no
           {tweet.likePersisted ? likeIconWithBg : likeIconEmptyBg}
         </span>
         <span className="ml-[-20px]">
-          <ValueAction classNameValueAction={tweet.likePersisted ? "valueStyleLike" : ""}  style={style ? valueStyle : {}} value={tweet.tweetActionValue3} />
+          <ValueAction classNameValueAction={tweet.likePersisted ? "valueStyleLike" : ""}  style={style ? valueStyle : {}} value={tweet.favoriteCount} />
         </span>
       </span>
     </>

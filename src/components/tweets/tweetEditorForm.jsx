@@ -34,9 +34,8 @@ function TweetEditorForm() {
     };
     console.log(data.tweetTextValue);
     const tweetData = { ...defaultValues};  
-    axios.post('http://localhost:5000/tweets',tweetData)
+    axios.post('http://localhost:3000/tweets',tweetData)
       .then((response) => console.log("",response.data),
-      // setAllDataTweets(response.tweetData)
       )
       .catch((error) => console.log(error));
       reset()

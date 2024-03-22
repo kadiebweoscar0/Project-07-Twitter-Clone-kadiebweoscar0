@@ -1,23 +1,51 @@
 import Tweet from "./tweet";
 import {tweets} from "../../datas";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ContexteTweet from "../../asset/contexteTweet";
 import ContextApp from "../../asset/contextApp";
 
 
-function Tweets() {
-    const { allDataTweets} = useContext(ContextApp)
-    const reversedTweets = allDataTweets.slice().reverse();
+// function Tweets() {
+//     const { allDataTweets, usersAndTweets} = useContext(ContextApp);
 
-   
-    return(
-        <div className="tweets overflow-hidden">
-            {reversedTweets.map((tweet) =>
-            (<ContexteTweet.Provider value={tweet}>
-                <Tweet />
-                </ContexteTweet.Provider>)
-            )}
-        </div>
-    )
+//     return(
+//       <div className="tweets overflow-hidden">
+//             {
+//               allDataTweets.map((tweet) =>{
+//                 (<ContexteTweet.Provider value={tweet}>
+//                   <Tweet />
+//                 </ContexteTweet.Provider>)
+//               })
+//             }
+//         </div>
+//     )
+// }
+
+function Tweets() {
+  const { allDataTweets, usersAndTweets } = useContext(ContextApp);
+
+  return (
+    <div className="tweets overflow-hidden">
+      {allDataTweets.map((tweet) => {
+        const user = usersAndTweets.find((user) => user.id === tweet.author);
+
+        if (!user) {
+          return ''
+        }
+
+        return (
+          <ContexteTweet.Provider key={tweet.id} value={{ user, tweet }}>
+            <Tweet />
+          </ContexteTweet.Provider>
+        );
+      })}
+    </div>
+  );
 }
+
 export default Tweets
+
+
+
+
+

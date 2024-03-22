@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'); */
 
 
 body{
@@ -171,7 +171,7 @@ body{
 
 .tweet-image img{
     max-width: 100%;
-    height: auto;
+    height: 400px;
     border-radius: 50px;
     border-color: #2F3336;
     border-style: solid;
