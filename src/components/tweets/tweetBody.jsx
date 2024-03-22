@@ -10,7 +10,7 @@ function TweetBody(props) {
         <div className="tweet-body overflow-hidden">
             <TweetTitle />
             <TweetText tweetTextValue={props.tweetTextValue} />
-            {tweet.media && <TweetImage urlImage={tweet.media} />}
+            {tweet.media.length > 0 && <TweetImage urlImage={tweet.media} />}
         </div>
     )
 }
