@@ -14,8 +14,10 @@ import TweetTitleDetail from "../tweets/tweetTitleDetail";
 import TweetAction from "../tweets/tweetAction";
 import Tweet from "../tweets/tweet";
 import ContexteTweet from "../../asset/contexteTweet";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ContextApp from "../../asset/contextApp";
+import axios from "axios";
+import Loder from "../loder";
 
 export function UserName(props) {
     return(
@@ -31,94 +33,69 @@ export function UserName(props) {
 export default function Profile() {
     const useParam = useParams()
     const {name} = useParam
-    const {allDataTweets}= useContext(ContextApp)
+    const [userTweetByHandle, setUserTweetByHandle] = useState([])
 
-  const userFind = allDataTweets.find((tweet) => tweet.titleAuthor === name);
-  const filterTWeetUser = allDataTweets.filter((tweet) => tweet.titleAuthor === name);
-    
- 
-    // if (!userFind) {
-    //    return(  
-    //     <div className="profile">
-    //         <div className="entete">
-    //             <NavLink to="/">
-    //                 <span className="icon-back" title="back">
-    //                     <ImageDefault urlImage={iconBacak}  />
-    //                 </span>
-    //             </NavLink>
-               
-    //             <UserName username="Bradley Ortiz" numberPost="2" />
-    //         </div>
-    //         <span className="image-cover">
-    //             <ImageDefault urlImage={imageCover} />
-    //         </span>
-    //         <span className="profil-author-and-button-editor">
-    //             <span className="profil-author">
-    //                 <Avatar myClassName="avatar-style-profile" urlAvatar={imageProfil} />
-    //             </span>
-    //             <Button className="button" textButton='edit profil' />
-    //         </span>
-           
-    //         <div className="detail-author">
-    //             <UserName username="Bradley Ortiz" userAdress="@Ortiz Bradley" />
-    //             <p> "joined December 2023"</p>
-    //             <p> 5 following  3 followers</p>
-    //         </div>
-    //         <ul className="user-info">
-    //             <li>Post</li>
-    //             <li>Replies</li>
-    //             <li>Heighlights</li>
-    //             <li>Media</li>
-    //             <li>Likes</li>
-    //         </ul>
-    //         <Tweets />
-    //     </div>
-    //    )
-    // }
-
-    return (
+    useEffect(()=>{
+        const fechUserByHandle = async ()=>{
+            try{
+                const response = await axios.get(`http://localhost:3000/${name}/tweets`);
+                setUserTweetByHandle(response.data)
+            } catch(error){
+                console.log("Erreur lors de la récupération des tweets:", error);
+            }
+        };
+        
+        fechUserByHandle()
+    },[]);
+    const {tweetFilterByHandle,  userFind} = userTweetByHandle
+    const user = userFind
+   console.log(userFind);
+        return (
+            <>
+       {!userFind ?  (<Loder />) :
         <div className="profile">
-            <div className="entete">
-                <NavLink to="/">
-                    <span className="icon-back rounded-full p-2" title="back">
-                        <ImageDefault urlImage={iconBacak}  />
-                    </span>
-                </NavLink>
-               
-                <UserName username={userFind.titleAuthor} numberPost={userFind.posts} />
-            </div>
-            <span className="image-cover">
-                <ImageDefault urlImage={userFind.cover} />
-            </span>
-            <span className="profil-author-and-button-editor">
-                <span className="profil-author">
-                    <Avatar myClassName="avatar-style-profile" urlAvatar={userFind.tweetProfile} />
-                    {/* {console.log(userFind.map((i) => i.tweetProfile))} */}
+                <div className="entete">
+                    <NavLink to="/">
+                        <span className="icon-back rounded-full p-2" title="back">
+                            <ImageDefault urlImage={iconBacak}  />
+                        </span>
+                    </NavLink>
+                
+                    <UserName username={userFind.name} numberPost={""} />
+                </div>
+                <span className="image-cover">
+                    <ImageDefault urlImage={userFind.profileBackground} />
                 </span>
-                <Button className="button" textButton='edit profil' />
-            </span>
-           
-            <div className="detail-author">
-                <UserName username={userFind.titleAuthor} userAdress={userFind.titleAddress} />
-                <p>{userFind.dateJoined}</p>
-                <p>{userFind.following} following   {userFind.followers} followers</p>
-            </div>
-            <ul className="user-info">
-                <li>Post</li>
-                <li>Replies</li>
-                <li>Heighlights</li>
-                <li>Media</li>
-                <li>Likes</li>
-            </ul>
+                <span className="profil-author-and-button-editor">
+                    <span className="profil-author">
+                        <Avatar myClassName="avatar-style-profile" urlAvatar={userFind.profilePicture} />
+                        {/* {console.log(userFind.map((i) => i.tweetProfile))} */}
+                    </span>
+                    <Button className="button" textButton='edit profil' />
+                </span>
+            
+                <div className="detail-author">
+                    <UserName username={userFind.name} userAdress={userFind.handle} />
+                    <p>{""}</p>
+                    <p>{userFind.followingCount} following   {userFind.followersCount} followers</p>
+                </div>
+                <ul className="user-info">
+                    <li>Post</li>
+                    <li>Replies</li>
+                    <li>Heighlights</li>
+                    <li>Media</li>
+                    <li>Likes</li>
+                </ul>
 
 
-            <div className="tweets">
-            {filterTWeetUser.map((tweet, index) =>
-            (<ContexteTweet.Provider value={tweet}>
-                <Tweet />
+                <div className="tweets">
+                {tweetFilterByHandle.map((tweet) =>
+                (<ContexteTweet.Provider value={{tweet,user}}>
+                    <Tweet />
                 </ContexteTweet.Provider>)
-            )}
-        </div>      
-        </div>
+                )}
+            </div>      
+        </div>}
+        </>
     );
 }

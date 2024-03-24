@@ -8,13 +8,12 @@ import ContextApp from "../../asset/contextApp";
 
 function Tweet() {
     const {tweet, user} = useContext(ContexteTweet);
-    console.log(user.profilePicture);
     
     return(
         <>
             {
                 <div className="tweet overflow-hidden" key={tweet.id}>
-                        <NavLink to={`/${user.handle}`} >
+                        <NavLink to={`/${user.handle}/tweets`} >
                             <Avatar myClassName="w-20 rounded-full" urlAvatar={user.profilePicture} />
                         </NavLink>
                         <TweetContent tweetTextValue = {tweet.text}

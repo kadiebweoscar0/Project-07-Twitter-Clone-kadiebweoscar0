@@ -32,14 +32,13 @@ export default function App() {
 
     fetchTweets();
   }, []);
-  // usersAndTweets.map((users) => console.log(users.user))
   return (
     <ContextApp.Provider value={{usersAndTweets, setUsersAntTweets, allDataTweets, setAllDataTweets, isAction, setIsAction, actionCount, setActionCount,isLike, setIsLike}}>
       <Layout>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path=":name"  element={<Pageprofile />} />
+            <Route path=":name/tweets"  element={<Pageprofile />} />
           </Routes>
         </BrowserRouter>
       </Layout>
