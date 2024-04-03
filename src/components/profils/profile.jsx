@@ -1,17 +1,8 @@
-import imageProfil from "/images/profile-photo.png";
 import ImageDefault from "../imageDefault";
 import iconBacak from "/images/iconBack.svg"
-import imageCover from "/images/tweet-image.png"
 import Button from "../button";
 import { NavLink, useParams } from "react-router-dom";
-import { tweets } from "../../datas.json"
 import Avatar from "../avatar";
-import Tweets from "../tweets/tweets";
-import TweetImage from "../tweets/tweetImage";
-import TweetText from "../tweets/tweetText";
-import TweetTitleAuthor from "../tweets/tweetTitleAuthor";
-import TweetTitleDetail from "../tweets/tweetTitleDetail";
-import TweetAction from "../tweets/tweetAction";
 import Tweet from "../tweets/tweet";
 import ContexteTweet from "../../asset/contexteTweet";
 import { useContext, useEffect, useState } from "react";
@@ -80,14 +71,14 @@ export default function Profile() {
                     <p>{userFind.followingCount} following   {userFind.followersCount} followers</p>
                 </div>
                 <ul className="user-info">
+                    
                     <li>Post</li>
                     <li>Replies</li>
                     <li>Heighlights</li>
                     <li>Media</li>
                     <li>Likes</li>
                 </ul>
-
-
+                
                 <div className="tweets">
                 {tweetFilterByHandle.map((tweet) =>
                 (<ContexteTweet.Provider value={{tweet,user}}>

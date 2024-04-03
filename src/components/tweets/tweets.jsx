@@ -6,22 +6,6 @@ import ContextApp from "../../asset/contextApp";
 import Loder from "../loder";
 
 
-// function Tweets() {
-//     const { allDataTweets, usersAndTweets} = useContext(ContextApp);
-
-//     return(
-//       <div className="tweets overflow-hidden">
-//             {
-//               allDataTweets.map((tweet) =>{
-//                 (<ContexteTweet.Provider value={tweet}>
-//                   <Tweet />
-//                 </ContexteTweet.Provider>)
-//               })
-//             }
-//         </div>
-//     )
-// }
-
 function Tweets() {
   const { allDataTweets, usersAndTweets } = useContext(ContextApp);
 

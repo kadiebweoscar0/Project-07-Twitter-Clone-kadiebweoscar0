@@ -8,10 +8,10 @@ function TweetTitle() {
     const {user} = useContext(ContexteTweet)
     return(
         <div className="tweet-title">
-            <NavLink to={`/${user.handle}`} >
+            <NavLink to={`/${user.handle}/tweets`} >
                 <TweetTitleAuthor titleAuthor={user.name} />
             </NavLink>
-            <NavLink to={`/${user.handle}}`} >
+            <NavLink to={`/${user.handle}/tweets`} >
                 <TweetTitleDetail styleTitleDetail="tweet-title-details" titleAddress={user.createdAt.substring(0, 33)} />
             </NavLink>
             {/* <TweetTitleDetail styleTitleDetail="tweet-title-details" dateHoursPublication={infoAuthor.createdAt} /> */}

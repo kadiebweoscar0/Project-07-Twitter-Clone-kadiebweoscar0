@@ -456,6 +456,14 @@ a{
     width: 100%;
     text-align: center;
 }
+
+.user-info a.active{
+    border-bottom: #1D9BF0 2px solid;
+    text-decoration: none;
+}
+
+.user-info{
+}
 /* testing a pull requist */
 .user-info li:hover{
     background-color: #6e767d46;
