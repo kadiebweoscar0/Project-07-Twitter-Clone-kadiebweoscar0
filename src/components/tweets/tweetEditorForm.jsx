@@ -19,7 +19,6 @@ function TweetEditorForm() {
       retweetCount: 0,
       favoriteCount: 0,
       text: data.tweetTextValue,
-      createdAt: new Date().toString()
     };
     const tweetData = { ...defaultValues};  
     axios.post('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets',tweetData)
