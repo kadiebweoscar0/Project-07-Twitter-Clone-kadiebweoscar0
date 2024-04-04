@@ -13,22 +13,19 @@ function TweetEditorForm() {
   
   const onSubmitForm = (data) => {
     const defaultValues = {
-      id: allDataTweets.length + 1,
       author: 8,
       media: [],
       retweetCount: 0,
       favoriteCount: 0,
-      text: data.tweetTextValue,
-      createdAt: new Date().toString()
+      text: data.tweetTextValue
     };
-    console.log(defaultValues);
     const tweetData = { ...defaultValues};  
     axios.post('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets',tweetData)
       .then((response) => console.log("newTweet",response.data),
       )
       .catch((error) => console.log(error));
       reset()
-  };
+  };  
 
   return (
     <form onSubmit={handleSubmit(onSubmitForm)} className="tweet-editor-form">

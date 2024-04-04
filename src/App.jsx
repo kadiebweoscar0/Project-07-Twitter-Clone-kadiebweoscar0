@@ -6,7 +6,6 @@ import Layout from "./components/layout.jsx";
 import Pageprofile from "./pages/pageProfile.jsx";
 import ContextApp from "./asset/contextApp.js";
 import { useState, useEffect } from "react";
-import Loder from "./components/loder.jsx";
 import imageX from "../public/images/Elon Musk.jpeg"
 import axios from "axios";
 import('./style/reset.css');
