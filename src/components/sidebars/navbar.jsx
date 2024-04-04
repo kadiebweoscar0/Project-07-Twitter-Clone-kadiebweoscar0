@@ -7,8 +7,13 @@ import iconeBookMarks from '../../../public/images/iconeBookmarks.svg';
 import iconeMore from '../../../public/images/iconeMore.svg';
 import iconeProfile from '../../../public/images/iconeProfile.svg';
 import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import ContextApp from '../../asset/contextApp';
 
 function NavBar() {
+    const {allDataTweets, usersAndTweets} = useContext(ContextApp)
+    const logerDefault = usersAndTweets[7]
+    console.log(logerDefault);
     return(
         <ul className='ul-navBar'>
             <li>
@@ -56,7 +61,7 @@ function NavBar() {
             </li>
 
             <li>
-                <NavLink className="flex gap-2" to="/Bradley Ortiz">
+                <NavLink className="flex gap-2" to={`/${logerDefault?.handle}/tweets`}>
                     <img src={iconeProfile} alt="icone" /> 
                     <span>Profile</span>
 

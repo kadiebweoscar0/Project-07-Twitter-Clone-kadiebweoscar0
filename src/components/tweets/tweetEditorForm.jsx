@@ -34,7 +34,7 @@ function TweetEditorForm() {
     };
     console.log(data.tweetTextValue);
     const tweetData = { ...defaultValues};  
-    axios.post('http://localhost:3000/tweets',tweetData)
+    axios.post('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets',tweetData)
       .then((response) => console.log("",response.data),
       )
       .catch((error) => console.log(error));

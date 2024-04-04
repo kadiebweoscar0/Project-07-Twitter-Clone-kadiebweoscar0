@@ -29,7 +29,7 @@ export default function Profile() {
     useEffect(()=>{
         const fechUserByHandle = async ()=>{
             try{
-                const response = await axios.get(`http://localhost:3000/${name}/tweets`);
+                const response = await axios.get(`https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/${name}/tweets`);
                 setUserTweetByHandle(response.data)
             } catch(error){
                 console.log("Erreur lors de la récupération des tweets:", error);

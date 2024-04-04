@@ -5,8 +5,14 @@ import imageProfil from "/images/profile-photo.png";
 import iconePrivate from "/images/iconePrivate.svg"
 import iconeTweeterSideBar from "../../../public/images/iconeTweeterSideBar.svg"
 import { NavLink } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import ContextApp from "../../asset/contextApp";
 
 function SideBar() {
+    const {allDataTweets, usersAndTweets} = useContext(ContextApp)
+    const logerDefault = usersAndTweets[7]
+console.log(allDataTweets);
+    
     return(
         <span className="sidebar">
             <span className="navBar">
@@ -16,15 +22,15 @@ function SideBar() {
                 <Button className="button-navBar" textButton="Tweet" />
                 </span> 
                 <span className="profileSetting"> 
-                <NavLink to="/Bradley-Ortiz">
-                    <Avatar myClassName="profilePhoto-setting" urlAvatar={imageProfil} />
+                <NavLink to={`/${logerDefault?.handle}/tweets`}>
+                    <Avatar myClassName="rounded-full profilePhoto-setting" urlAvatar={logerDefault?.profilePicture} />
                 </NavLink>
                     <span className="title-profileSetting flex">
-                        <NavLink className="flex" to="/Bradley Ortiz">
-                            <h3> Bradley Ortiz </h3>
+                        <NavLink className="flex" to={`/${logerDefault?.handle}/tweets`}>
+                            <h3> {logerDefault?.name} </h3>
                             <img src={iconePrivate} alt="icone" /> 
                         </NavLink> 
-                        <p>@bradley...</p>
+                        <p>{logerDefault?.handle}...</p>
                     </span>
 
                 </span>

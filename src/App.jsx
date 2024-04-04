@@ -2,10 +2,10 @@ import Home from "./pages/home.jsx";
 import Layout from "./components/layout.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pageprofile from "./pages/pageProfile.jsx";
-import ContexteTweet from "./asset/contexteTweet.js";
 import ContextApp from "./asset/contextApp.js";
-import  {tweets}  from "./datas.json";
 import { useState, useEffect } from "react";
+import Loder from "./components/loder.jsx";
+import imageX from "../public/images/Elon Musk.jpeg"
 import axios from "axios";
 import('./style/reset.css');
 import('./style/App.css');
@@ -20,7 +20,7 @@ export default function App() {
   useEffect(() => {
     const fetchTweets = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/tweets');
+        const response = await axios.get('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets');
           setAllDataTweets(response.data.tweetRecentsToOlds)
           setUsersAntTweets(response.data.users);
           // console.log(response.data);
@@ -33,7 +33,12 @@ export default function App() {
     fetchTweets();
   }, []);
   return (
-    <ContextApp.Provider value={{usersAndTweets, setUsersAntTweets, allDataTweets, setAllDataTweets, isAction, setIsAction, actionCount, setActionCount,isLike, setIsLike}}>
+   <>
+   {!allDataTweets ?( <div className="m-auto flex flex-col justify-center items-center">
+    <img src={imageX} alt="image X" />
+    <p>loadin ...</p>
+   </div>) : 
+    (<ContextApp.Provider value={{usersAndTweets, setUsersAntTweets, allDataTweets, setAllDataTweets, isAction, setIsAction, actionCount, setActionCount,isLike, setIsLike}}>
       <Layout>
         <BrowserRouter>
           <Routes>
@@ -42,6 +47,8 @@ export default function App() {
           </Routes>
         </BrowserRouter>
       </Layout>
-    </ContextApp.Provider>
+    </ContextApp.Provider>)
+  }
+   </>
   );
 }
