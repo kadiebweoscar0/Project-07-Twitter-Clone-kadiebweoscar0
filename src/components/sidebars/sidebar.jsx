@@ -11,7 +11,6 @@ import ContextApp from "../../asset/contextApp";
 function SideBar() {
     const {allDataTweets, usersAndTweets} = useContext(ContextApp)
     const logerDefault = usersAndTweets[7]
-console.log(allDataTweets);
     
     return(
         <span className="sidebar">

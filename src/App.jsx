@@ -23,8 +23,6 @@ export default function App() {
         const response = await axios.get('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets');
           setAllDataTweets(response.data.tweetRecentsToOlds)
           setUsersAntTweets(response.data.users);
-          // console.log(response.data);
-        // allDataTweets.map((user)=> console.log(user.text))
       } catch (error) {
         console.error("Erreur lors de la récupération des tweets:", error);
       }
@@ -34,7 +32,7 @@ export default function App() {
   }, []);
   return (
    <>
-   {!allDataTweets ?( <div className="m-auto flex flex-col justify-center items-center">
+   {allDataTweets.length < 1 ?( <div className="m-auto flex flex-col justify-center items-center">
     <img src={imageX} alt="image X" />
     <p>loadin ...</p>
    </div>) : 

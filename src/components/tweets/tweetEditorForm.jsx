@@ -8,34 +8,23 @@ import axios from "axios";
 
 
 function TweetEditorForm() {
-  const { tweets, allDataTweets, setAllDataTweets } = useContext(ContextApp);
+  const { allDataTweets, setAllDataTweets } = useContext(ContextApp);
   const { register, handleSubmit, reset, formState: {errors} } = useForm();
   
-
   const onSubmitForm = (data) => {
     const defaultValues = {
       id: allDataTweets.length + 1,
-      tweetProfile: "public/images/profile-photo.png",
-      titleAuthor: "Bradley Ortiz",
-      titleAddress: "@Bradley Ortiz",
-      dateHoursPublication:`. 7min`,
-      dateJoined: "joined December 2023",
-      following: 6,
-      followers: 0,
-      posts: 0,
-      cover: "public/images/CoverCUrrentUser.jpeg",
-      tweetActionValue1: 0,
-      tweetActionValue2: 0,
-      tweetActionValue3: 0,
-      tweetActionValue4: "",
-      imageTweet: "",
-      likePersisted: false,
-      tweetTextValue: data.tweetTextValue
+      author: 8,
+      media: [],
+      retweetCount: 0,
+      favoriteCount: 0,
+      text: data.tweetTextValue,
+      createdAt: new Date().toString()
     };
-    console.log(data.tweetTextValue);
+    console.log(defaultValues);
     const tweetData = { ...defaultValues};  
     axios.post('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets',tweetData)
-      .then((response) => console.log("",response.data),
+      .then((response) => console.log("newTweet",response.data),
       )
       .catch((error) => console.log(error));
       reset()
