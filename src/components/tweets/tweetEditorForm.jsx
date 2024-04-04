@@ -1,4 +1,4 @@
-
+import React from "react"
 import { useContext, useState } from "react";
 import TweetEditorButton from "./tweetEditorButton";
 import TweetEditorInput from "./tweetEditorInput";
@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 
-let valueTextArea = document.getElementById("kk")
 function TweetEditorForm() {
   const { tweets, allDataTweets, setAllDataTweets } = useContext(ContextApp);
   const { register, handleSubmit, reset } = useForm();
