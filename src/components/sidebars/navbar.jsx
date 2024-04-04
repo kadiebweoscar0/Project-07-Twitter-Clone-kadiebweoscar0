@@ -13,8 +13,7 @@ import ContextApp from '../../asset/contextApp';
 function NavBar() {
     const {allDataTweets, usersAndTweets} = useContext(ContextApp)
     const logerDefault = usersAndTweets[7]
-    console.log(logerDefault);
-    return(
+        return(
         <ul className='ul-navBar'>
             <li>
                 <NavLink className="flex gap-2" to="/">
