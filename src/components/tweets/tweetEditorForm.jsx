@@ -1,4 +1,5 @@
 import React from "react"
+import React from "react"
 import { useContext, useState } from "react";
 import TweetEditorButton from "./tweetEditorButton";
 import TweetEditorInput from "./tweetEditorInput";
@@ -17,7 +18,7 @@ function TweetEditorForm() {
       media: [],
       retweetCount: 0,
       favoriteCount: 0,
-      text: data.tweetTextValue
+      text: data.tweetTextValue,
     };
     const tweetData = { ...defaultValues};  
     axios.post('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets',tweetData)
