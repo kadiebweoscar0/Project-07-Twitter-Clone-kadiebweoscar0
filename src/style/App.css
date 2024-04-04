@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'); */
 
 
 body{
@@ -171,7 +171,7 @@ body{
 
 .tweet-image img{
     max-width: 100%;
-    height: auto;
+    height: 400px;
     border-radius: 50px;
     border-color: #2F3336;
     border-style: solid;
@@ -395,9 +395,9 @@ a{
 }
 
 .icon-back, .hover-cecle{
-    padding: .6rem;
-    border-radius: 50%;
-    align-items: center;
+    padding: .6rem !important;
+    border-radius: 50% !important;
+    align-items: center !important;
 }
 
 .icon-back:hover{
@@ -411,7 +411,7 @@ a{
 
 .image-cover img{
     width: 100%;
-    height: 180px;
+    height: 200px;
 }
 
 .profil-author{
@@ -455,6 +455,14 @@ a{
     padding: 1rem;
     width: 100%;
     text-align: center;
+}
+
+.user-info a.active{
+    border-bottom: #1D9BF0 2px solid;
+    text-decoration: none;
+}
+
+.user-info{
 }
 /* testing a pull requist */
 .user-info li:hover{

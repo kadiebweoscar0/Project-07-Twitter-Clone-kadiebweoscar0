@@ -4,21 +4,29 @@ import axios from "axios"
 import Home from "./pages/home.jsx";
 import Layout from "./components/layout.jsx";
 import Pageprofile from "./pages/pageProfile.jsx";
-import ContexteTweet from "./asset/contexteTweet.js";
 import ContextApp from "./asset/contextApp.js";
-import  {tweets}  from "./datas.json";
+import { useState, useEffect } from "react";
+import Loder from "./components/loder.jsx";
+import imageX from "../public/images/Elon Musk.jpeg"
+import axios from "axios";
 import('./style/reset.css');
 import('./style/App.css');
 
 export default function App() {
   const [allDataTweets, setAllDataTweets] = useState([])
+  const  [isAction, setIsAction]= useState(true)
+  const [actionCount, setActionCount] = useState(false);
+  const [isLike, setIsLike] = useState(false)
+  const [usersAndTweets, setUsersAntTweets] = useState([])
 
   useEffect(() => {
     const fetchTweets = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/tweets');
-        console.log(response.data);
-        setAllDataTweets(response.data);
+        const response = await axios.get('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets');
+          setAllDataTweets(response.data.tweetRecentsToOlds)
+          setUsersAntTweets(response.data.users);
+          // console.log(response.data);
+        // allDataTweets.map((user)=> console.log(user.text))
       } catch (error) {
         console.error("Erreur lors de la récupération des tweets:", error);
       }
@@ -26,26 +34,23 @@ export default function App() {
 
     fetchTweets();
   }, []);
-  
-  // axios.get('https://65c54af1dae2304e92e428cf.mockapi.io/testApi/v1/tweetData')
-  // .then(response => 
-  //   console.log(response.data)
-  // )
-  // .catch(error =>
-  //   console.log(error)
-  // );
-
-
   return (
-    <ContextApp.Provider value={{tweets, allDataTweets, setAllDataTweets}}>
+   <>
+   {!allDataTweets ?( <div className="m-auto flex flex-col justify-center items-center">
+    <img src={imageX} alt="image X" />
+    <p>loadin ...</p>
+   </div>) : 
+    (<ContextApp.Provider value={{usersAndTweets, setUsersAntTweets, allDataTweets, setAllDataTweets, isAction, setIsAction, actionCount, setActionCount,isLike, setIsLike}}>
       <Layout>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path=":name"  element={<Pageprofile />} />
+            <Route path=":name/tweets"  element={<Pageprofile />} />
           </Routes>
         </BrowserRouter>
       </Layout>
-    </ContextApp.Provider>
+    </ContextApp.Provider>)
+  }
+   </>
   );
 }

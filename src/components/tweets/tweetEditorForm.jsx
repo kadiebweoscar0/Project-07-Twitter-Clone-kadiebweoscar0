@@ -9,31 +9,33 @@ import axios from "axios";
 
 function TweetEditorForm() {
   const { tweets, allDataTweets, setAllDataTweets } = useContext(ContextApp);
-  const { register, handleSubmit, reset } = useForm();
-  const defaultValues = {
-    id: allDataTweets.length + 1,
-    tweetProfile: "public/images/profile-photo.png",
-    titleAuthor: "Bradley Ortiz",
-    titleAddress: "@Bradley Ortiz",
-    dateHoursPublication: ". 7min",
-    dateJoined: "joined December 2023",
-    following: 6,
-    followers: 0,
-    posts: 0,
-    cover: "public/images/CoverCUrrentUser.jpeg",
-    tweetActionValue1: 0,
-    tweetActionValue2: 0,
-    tweetActionValue3: 0,
-    tweetActionValue4: "",
-    imageTweet: ""
-  };
+  const { register, handleSubmit, reset, formState: {errors} } = useForm();
+  
 
   const onSubmitForm = (data) => {
-    const tweetData = { ...defaultValues, ...data };  
-    axios.post('http://localhost:8000/tweets', tweetData)
-      .then((response) => console.log(response.tweetData),
-      setAllDataTweets(response.tweetData)
-      
+    const defaultValues = {
+      id: allDataTweets.length + 1,
+      tweetProfile: "public/images/profile-photo.png",
+      titleAuthor: "Bradley Ortiz",
+      titleAddress: "@Bradley Ortiz",
+      dateHoursPublication:`. 7min`,
+      dateJoined: "joined December 2023",
+      following: 6,
+      followers: 0,
+      posts: 0,
+      cover: "public/images/CoverCUrrentUser.jpeg",
+      tweetActionValue1: 0,
+      tweetActionValue2: 0,
+      tweetActionValue3: 0,
+      tweetActionValue4: "",
+      imageTweet: "",
+      likePersisted: false,
+      tweetTextValue: data.tweetTextValue
+    };
+    console.log(data.tweetTextValue);
+    const tweetData = { ...defaultValues};  
+    axios.post('https://twitter-clone-api-c1-kadiebweoscar0.onrender.com/tweets',tweetData)
+      .then((response) => console.log("",response.data),
       )
       .catch((error) => console.log(error));
       reset()
@@ -41,7 +43,8 @@ function TweetEditorForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmitForm)} className="tweet-editor-form">
-      <input
+      <textarea 
+        style={{overflow: "hidden"}}
         id="kk"
         className="tweet-editor-input"
         type="text"
